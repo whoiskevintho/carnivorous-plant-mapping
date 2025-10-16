@@ -10,7 +10,7 @@ export default function MapView() {
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: "https://api.maptiler.com/maps/streets-v2/style.json?key=KDJVRGphbKUQxUNhl8qL",
+      style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${import.meta.env.VITE_MAPTILER_API_KEY}`,
       center: [-74.5, 40], // longitude, latitude
       zoom: 9,
     });
