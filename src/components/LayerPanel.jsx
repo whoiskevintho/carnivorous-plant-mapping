@@ -60,6 +60,7 @@ export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, t
                     maxWidth: 350,
                     maxHeight: '90vh',
                     overflowY: 'auto',
+                    scrollbarGutter: 'stable',
                     backgroundColor: greenTheme.background,
                     borderTop: `4px solid ${greenTheme.primary}`,
                     '&::-webkit-scrollbar': {

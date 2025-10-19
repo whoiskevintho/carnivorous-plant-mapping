@@ -1,13 +1,13 @@
 // Define colors for each species
 const SPECIES_COLORS = {
-  alata: '#00FF00',
-  flava: '#FFD700',
-  leucophylla: '#FF00FF',
-  minor: '#0000FF',
-  oreophila: '#00DFDD',
-  psittacina: '#92854F',
-  purpurea: "#800080",
-  rubra: '#DC143C',
+  alata: '#E63946',
+  flava: '#00B4D8',
+  leucophylla: '#F1C40F',
+  minor: '#8E44AD',
+  oreophila: '#FF6F91',
+  psittacina: '#F39C12',
+  purpurea: "#2ECC71",
+  rubra: '#3F51B5',
 };
 
 // Organized layer configuration with hierarchy
@@ -956,16 +956,62 @@ export const layerGroups = [
       'fill-outline-color': '#000'
     },
     info: {
-      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sarracenia_rubra_subsp._jonesii.jpg/800px-Sarracenia_rubra_subsp._jonesii.jpg',
+      imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2576.jpeg',
       blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+      photographer: '2009 Barry Rice',
+      sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287818&one=T',
       distribution: 'Native to the southeastern United States. Found in scattered populations from North Carolina to the Florida Panhandle and Mississippi. Prefers acidic, nutrient-poor wetlands.',
       habitat: 'Seepage bogs, wet pine flatwoods',
       conservationStatus: 'Endangered'
     },
     children: [
       {
-        id: 'sarracenia-rubra-var-gulfensis',
-        name: 'S. rubra var. gulfensis',
+        id: 'sarracenia-rubra-var-rubra',
+        name: 'S.rubra var. rubra',
+        commonName: 'Sweet Pitcher Plant',
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2576.jpeg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: '2009 Barry Rice',
+          sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287818&one=T',
+          distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
+          habitat: 'Roadside ditches, wet pine flatwoods',
+          conservationStatus: 'Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-alabamensis',
+        name: 'S. rubra ssp. alabamensis',
+        commonName: 'Alabama Pitcher Plant',
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_03759.jpg',
+          blurhash: 'L2E{8Ukz0q}Y01AH0,MN0p?C^@G8',
+          photographer: 'Alan Cressler',
+          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=1&taxonid=4607',
+          distribution: 'Limited to coastal areas of Alabama, Mississippi, and the western Florida Panhandle. One of the rarest Sarracenia varieties.',
+          habitat: 'Coastal plain seepage bogs',
+          conservationStatus: 'Critically Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-gulfensis',
+        name: 'S. rubra ssp. gulfensis',
         commonName: 'Gulf Coast Pitcher Plant',
         visible: false,
         type: 'fill',
@@ -976,11 +1022,101 @@ export const layerGroups = [
           'fill-outline-color': '#000'
         },
         info: {
-          imageUrl: 'https://example.com/gulfensis.jpg',
-          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F', // Replace with actual image
+          imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: '2009 Barry Rice',
+          sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287815&one=T',
           distribution: 'Limited to coastal areas of Alabama, Mississippi, and the western Florida Panhandle. One of the rarest Sarracenia varieties.',
           habitat: 'Coastal plain seepage bogs',
           conservationStatus: 'Critically Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-gulfensis-f-luteoviridis',
+        name: 'S. rubra ssp. gulfensis f. luteoviridis',
+        commonName: 'Gulf Coast Pitcher Plant',
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: '2009 Barry Rice',
+          sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287815&one=T',
+          distribution: 'Limited to coastal areas of Alabama, Mississippi, and the western Florida Panhandle. One of the rarest Sarracenia varieties.',
+          habitat: 'Coastal plain seepage bogs',
+          conservationStatus: 'Critically Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-jonesii',
+        name: 'S.rubra ssp. jonesii',
+        commonName: 'Mountain Sweer Pitcher Plant',
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: 'Alan Cressler',
+          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=5&taxonid=4611',
+          distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
+          habitat: 'Roadside ditches, wet pine flatwoods',
+          conservationStatus: 'Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-jonesii-f-viridescens',
+        name: 'S.rubra ssp. jonesii f. viridescens',
+        commonName: "Mountain Sweer Pitcher Plant 'Antho-free'",
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: 'Alan Cressler',
+          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=5&taxonid=4611',
+          distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
+          habitat: 'Roadside ditches, wet pine flatwoods',
+          conservationStatus: 'Endangered'
+        }
+      },
+      {
+        id: 'sarracenia-rubra-ssp-wherryi',
+        name: 'S.rubra ssp. wherryi',
+        commonName: "not sure what to call this",
+        visible: false,
+        type: 'fill',
+        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        paint: {
+          'fill-color': SPECIES_COLORS.rubra,
+          'fill-opacity': 0.6,
+          'fill-outline-color': '#000'
+        },
+        info: {
+          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_07077.jpg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: 'Alan Cressler',
+          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=2&taxonid=4608',
+          distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
+          habitat: 'Roadside ditches, wet pine flatwoods',
+          conservationStatus: 'Endangered'
         }
       },
       {
@@ -996,8 +1132,10 @@ export const layerGroups = [
           'fill-outline-color': '#000'
         },
         info: {
-          imageUrl: 'https://example.com/viatorum.jpg',
-          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F', // Replace with actual image
+          imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2571.jpeg',
+          blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
+          photographer: '2009 Barry Rice',
+          sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287813&one=T',
           distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
           habitat: 'Roadside ditches, wet pine flatwoods',
           conservationStatus: 'Endangered'
