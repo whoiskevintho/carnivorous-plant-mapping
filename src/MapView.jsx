@@ -18,8 +18,8 @@ export default function MapView() {
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: `https://api.maptiler.com/maps/landscape-v4/style.json?key=${import.meta.env.VITE_MAPTILER_API_KEY}`,
-      center: [-74.5, 40], // Adjust to your region
-      zoom: 9,
+      center: [-86.5, 35], // Adjust to your region
+      zoom: 5,
     });
 
     map.current.on('load', () => {

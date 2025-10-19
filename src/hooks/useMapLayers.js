@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
+import { getAllLayers } from '../config/layerConfig';
 
 export const useMapLayers = (map, layerGroups) => {
-  const [layers, setLayers] = useState(() => 
-    layerGroups.flatMap(group => group.children)
-  );
+  const [layers, setLayers] = useState(() => getAllLayers());
   const [groups, setGroups] = useState(() =>
     layerGroups.map(group => ({ id: group.id, visible: group.visible }))
   );
