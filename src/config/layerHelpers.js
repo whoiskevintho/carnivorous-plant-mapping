@@ -21,6 +21,19 @@ export const createHeatmapPaint = (baseColor, numShades = 3, opacity = 0.6) => {
   };
 };
 
+export const createPresencePaint = (opacity = 0.6) => ({
+  'fill-color': [
+    'match',
+    ['get', 's_presence'],
+    'extant', '#2ECC71',      // Green for extant
+    'extirpated', '#E63946',  // Red for extirpated
+    'unknown', '#00B4D8',     // Blue for unknown
+    '#999999'                 // Gray fallback
+  ],
+  'fill-opacity': opacity,
+  'fill-outline-color': '#000'
+});
+
 // Factory function to create a standard variety layer
 export const createVarietyLayer = ({
   id,
@@ -31,7 +44,8 @@ export const createVarietyLayer = ({
   info,
   visible = false,
   paintType = 'standard',
-  opacity = 0.6
+  opacity = 0.6,
+  filter = null  // Optional: { field: 'unique_id', values: [1, 2, 3] } or { field: 'species_id', value: 'var-alata' }
 }) => ({
   id,
   name,
@@ -39,10 +53,12 @@ export const createVarietyLayer = ({
   visible,
   type: 'fill',
   dataUrl,
+  color,  // Store base color for easy access
   paint: paintType === 'heatmap' 
     ? createHeatmapPaint(color, 3, opacity) 
     : createStandardPaint(color, opacity),
-  info
+  info,
+  filter
 });
 
 // Factory function to create species group
@@ -54,6 +70,7 @@ export const createSpeciesGroup = ({
   dataUrl,
   info,
   children,
+  sources = [],
   visible = true,
   opacity = 0.4
 }) => ({
@@ -66,7 +83,8 @@ export const createSpeciesGroup = ({
   dataUrl,
   paint: createStandardPaint(color, opacity),
   info,
-  children
+  children,
+  sources
 });
 
 // Helper to create info object
@@ -98,3 +116,23 @@ export const createInfo = ({
   return info;
 };
 
+// Helper to create distribution source
+export const createDistributionSource = ({
+  id,
+  name,
+  year,
+  dataUrl,
+  citation,
+  type = 'fill',
+  paintType = 'standard',
+  opacity = 0.4
+}) => ({
+  id,
+  name,
+  year,
+  dataUrl,
+  citation,
+  type,
+  paintType,
+  opacity
+});

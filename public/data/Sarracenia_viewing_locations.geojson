@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "Sarracenia_viewing_locations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Abita Creek Flatwoods Preserve", "link": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/abita-creek-flatwoods-preserve/", "species": "s_alata_var_alata", "unique_id": 1 }, "geometry": { "type": "Point", "coordinates": [ -89.966007418997691, 30.507315874890299 ] } },
+{ "type": "Feature", "properties": { "name": "Lake Ramsay Savannah", "link": "https://www.wlf.louisiana.gov/page/lake-ramsay-savannah", "species": "s_alata_var_alata", "unique_id": 2 }, "geometry": { "type": "Point", "coordinates": [ -90.166823211175739, 30.534378984744286 ] } },
+{ "type": "Feature", "properties": { "name": "De Soto National Forest", "link": "https://www.fs.usda.gov/r08/mississippi/recreation", "species": "s_alata_var_alata", "unique_id": 3 }, "geometry": { "type": "Point", "coordinates": [ -89.00166041698904, 31.046943500690158 ] } },
+{ "type": "Feature", "properties": { "name": "Tuxachanie Trail", "link": "https://explorestonecounty.com/tuxachanie-trail-in-stone-county/", "species": "s_alata_var_alata", "unique_id": 4 }, "geometry": { "type": "Point", "coordinates": [ -89.13325328080515, 30.666832825609021 ] } },
+{ "type": "Feature", "properties": { "name": "Mississippi Sandhill Crane National Wildlife Refuge", "link": "https://www.fws.gov/refuge/mississippi-sandhill-crane", "species": "s_alata_var_alata", "unique_id": 5 }, "geometry": { "type": "Point", "coordinates": [ -88.655969274740713, 30.451640367134829 ] } },
+{ "type": "Feature", "properties": { "name": "Cooter's Bog", "link": "https://www.fs.usda.gov/wildflowers/regions/southern/CootersBog/index.shtml", "species": "s_alata_var_alata", "unique_id": 6 }, "geometry": { "type": "Point", "coordinates": [ -92.891272891674859, 31.028734232771601 ] } },
+{ "type": "Feature", "properties": { "name": "Big Thicket National Preserve", "link": "https://www.nps.gov/bith/learn/nature/citizen-science.htm", "species": "s_alata_var_alata", "unique_id": 7 }, "geometry": { "type": "Point", "coordinates": [ -94.336965645544353, 30.585715150560411 ] } },
+{ "type": "Feature", "properties": { "name": "Watson Rare Native Plant Preserve", "link": "https://watsonpreserve.ning.com/", "species": "s_alata_var_alata", "unique_id": 8 }, "geometry": { "type": "Point", "coordinates": [ -94.378256852812541, 30.579450842009379 ] } },
+{ "type": "Feature", "properties": { "name": "Beaver Pond", "link": "https://www.alltrails.com/trail/us/texas/beaver-pond", "species": "s_alata_var_alata", "unique_id": 9 }, "geometry": { "type": "Point", "coordinates": [ -94.126409363446328, 31.07071833945885 ] } },
+{ "type": "Feature", "properties": { "name": "Angelina National Forest", "link": "https://www.fs.usda.gov/r08/texas/offices/angelina-national-forest", "species": "s_alata_var_alata", "unique_id": 10 }, "geometry": { "type": "Point", "coordinates": [ -94.369748361618008, 31.079864730559997 ] } },
+{ "type": "Feature", "properties": { "name": "Gus Engeling WMA", "link": "https://tpwd.texas.gov/huntwild/hunt/wma/find_a_wma/list/?id=10", "species": "s_alata_var_alata", "unique_id": 11 }, "geometry": { "type": "Point", "coordinates": [ -95.896348781759215, 31.912696177931398 ] } },
+{ "type": "Feature", "properties": { "name": "Texas Freshwater Fisheries Center", "link": "https://tpwd.texas.gov/fishboat/fish/didyouknow/inland/eastexas_treasure.phtml", "species": "s_alata_var_alata", "unique_id": 12 }, "geometry": { "type": "Point", "coordinates": [ -95.766536541100251, 32.217892408736098 ] } }
+]
+}

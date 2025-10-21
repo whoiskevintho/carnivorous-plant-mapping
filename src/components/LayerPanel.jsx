@@ -10,7 +10,11 @@ import {
     Box,
     Divider,
     IconButton,
-    alpha
+    alpha,
+    Chip,
+    Radio,
+    RadioGroup,
+    FormControl
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LayersIcon from '@mui/icons-material/Layers';
@@ -26,7 +30,17 @@ const greenTheme = {
     textSecondary: '#81c784' // Light green text
 };
 
-export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, toggleGroup }) {
+export default function LayerPanel({ 
+    layerGroups, 
+    layers, 
+    groups, 
+    toggleLayer, 
+    toggleGroup,
+    selectedSubspecies = [],
+    onSubspeciesSelect,
+    activeSource,
+    onSourceChange
+}) {
     const [expandedGroups, setExpandedGroups] = useState(
         layerGroups.reduce((acc, group) => ({ ...acc, [group.id]: false }), {})
     );
@@ -46,6 +60,16 @@ export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, t
     const handleInfoClick = (group, event) => {
         event.stopPropagation();
         setSelectedSpecies(group);
+    };
+
+    const handleSubspeciesClick = (subspeciesId) => {
+        if (onSubspeciesSelect) {
+            onSubspeciesSelect(subspeciesId);
+        }
+    };
+
+    const isSubspeciesSelected = (subspeciesId) => {
+        return selectedSubspecies.includes(subspeciesId);
     };
 
     return (
@@ -183,6 +207,7 @@ export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, t
                                         />
 
                                         <Typography
+                                            component="div"
                                             sx={{
                                                 fontStyle: 'italic',
                                                 fontWeight: 600,
@@ -209,18 +234,26 @@ export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, t
                                         </Typography>
 
                                         {/* Info Button */}
-                                        <IconButton
-                                            size="small"
+                                        <Box
+                                            component="span"
                                             onClick={(e) => handleInfoClick(group, e)}
                                             sx={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                width: 32,
+                                                height: 32,
+                                                borderRadius: '50%',
                                                 color: greenTheme.primaryDark,
+                                                cursor: 'pointer',
+                                                transition: 'background-color 0.2s',
                                                 '&:hover': {
                                                     backgroundColor: alpha(greenTheme.primary, 0.2)
                                                 }
                                             }}
                                         >
                                             <InfoOutlinedIcon fontSize="small" />
-                                        </IconButton>
+                                        </Box>
                                     </Box>
                                 </AccordionSummary>
 
@@ -232,102 +265,106 @@ export default function LayerPanel({ layerGroups, layers, groups, toggleLayer, t
                                         backgroundColor: alpha(greenTheme.primaryLight, 0.2)
                                     }}
                                 >
-                                    <Box sx={{ pl: 2 }}>
-                                        {group.children.map((layer, layerIndex) => {
-                                            const layerState = layers.find(l => l.id === layer.id);
-                                            const isLayerVisible = layerState?.visible ?? layer.visible;
+                                    {/* Distribution Sources */}
+                                    {group.sources && group.sources.length > 0 && (
+                                        <Box sx={{ mb: 2 }}>
+                                            <Typography
+                                                variant="caption"
+                                                sx={{
+                                                    fontWeight: 600,
+                                                    color: greenTheme.text,
+                                                    mb: 1,
+                                                    display: 'block'
+                                                }}
+                                            >
+                                                Distribution Sources:
+                                            </Typography>
+                                            <FormControl>
+                                                <RadioGroup
+                                                    value={activeSource?.[group.id] || group.sources[0]?.id}
+                                                    onChange={(e) => onSourceChange?.(group.id, e.target.value)}
+                                                >
+                                                    {group.sources.map((source) => (
+                                                        <FormControlLabel
+                                                            key={source.id}
+                                                            value={source.id}
+                                                            control={
+                                                                <Radio
+                                                                    size="small"
+                                                                    sx={{
+                                                                        color: greenTheme.primary,
+                                                                        '&.Mui-checked': {
+                                                                            color: greenTheme.primaryDark,
+                                                                        },
+                                                                    }}
+                                                                />
+                                                            }
+                                                            label={
+                                                                <Typography variant="body2" sx={{ fontSize: '0.85rem' }}>
+                                                                    {source.name} ({source.year})
+                                                                </Typography>
+                                                            }
+                                                        />
+                                                    ))}
+                                                </RadioGroup>
+                                            </FormControl>
+                                            <Divider sx={{ my: 1.5, backgroundColor: alpha(greenTheme.primary, 0.15) }} />
+                                        </Box>
+                                    )}
 
-                                            return (
-                                                <Box key={layer.id}>
-                                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                                        {/* Checkbox */}
-                                                        <Checkbox
-                                                            checked={isLayerVisible}
-                                                            onChange={() => toggleLayer(layer.id)}
-                                                            size="small"
+                                    {/* Subspecies/Varieties as Chips */}
+                                    {group.children && group.children.length > 0 && (
+                                        <Box>
+                                            <Typography
+                                                variant="caption"
+                                                sx={{
+                                                    fontWeight: 600,
+                                                    color: greenTheme.text,
+                                                    mb: 1,
+                                                    display: 'block'
+                                                }}
+                                            >
+                                                Subspecies & Varieties:
+                                            </Typography>
+                                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                                                {group.children.map((layer) => {
+                                                    const isSelected = isSubspeciesSelected(layer.id);
+                                                    return (
+                                                        <Chip
+                                                            key={layer.id}
+                                                            label={layer.name}
+                                                            onClick={() => handleSubspeciesClick(layer.id)}
+                                                            onDelete={layer.info ? (e) => {
+                                                                e.stopPropagation();
+                                                                setSelectedSpecies(layer);
+                                                            } : undefined}
+                                                            deleteIcon={layer.info ? <InfoOutlinedIcon fontSize="small" /> : undefined}
+                                                            variant={isSelected ? "filled" : "outlined"}
                                                             sx={{
-                                                                color: greenTheme.textSecondary,
-                                                                '&.Mui-checked': {
-                                                                    color: greenTheme.primary,
+                                                                backgroundColor: isSelected ? group.color : 'transparent',
+                                                                borderColor: group.color,
+                                                                color: isSelected ? 'white' : greenTheme.text,
+                                                                fontWeight: isSelected ? 600 : 400,
+                                                                fontSize: '0.8rem',
+                                                                boxShadow: isSelected ? `0 0 12px ${alpha(group.color, 0.6)}` : 'none',
+                                                                transition: 'all 0.3s ease',
+                                                                '&:hover': {
+                                                                    backgroundColor: isSelected ? group.color : alpha(group.color, 0.1),
+                                                                    boxShadow: `0 0 8px ${alpha(group.color, 0.4)}`,
                                                                 },
-                                                                padding: '4px'
-                                                            }}
-                                                        />
-
-                                                        {/* Color indicator box */}
-                                                        <Box
-                                                            sx={{
-                                                                width: 16,
-                                                                height: 16,
-                                                                backgroundColor: group.color,
-                                                                borderRadius: '3px',
-                                                                border: `1.5px solid ${alpha(group.color, 0.8)}`,
-                                                                boxShadow: `0 1px 3px ${alpha(group.color, 0.3)}`,
-                                                                flexShrink: 0
-                                                            }}
-                                                        />
-
-                                                        {/* Label */}
-                                                        <Box sx={{ flex: 1 }}>
-                                                            <Typography
-                                                                variant="body2"
-                                                                sx={{
-                                                                    fontSize: '0.875rem',
-                                                                    color: greenTheme.text
-                                                                }}
-                                                            >
-                                                                {layer.name}
-                                                                {layer.commonName && (
-                                                                    <Typography
-                                                                        component="span"
-                                                                        sx={{
-                                                                            display: 'block',
-                                                                            fontSize: '0.75rem',
-                                                                            fontStyle: 'normal',
-                                                                            color: alpha(greenTheme.text, 0.6),
-                                                                            mt: 0.25
-                                                                        }}
-                                                                    >
-                                                                        {layer.commonName}
-                                                                    </Typography>
-                                                                )}
-                                                            </Typography>
-                                                        </Box>
-
-                                                        {/* Info Button for Variety */}
-                                                        {layer.info && (
-                                                            <IconButton
-                                                                size="small"
-                                                                onClick={(e) => {
-                                                                    e.stopPropagation();
-                                                                    setSelectedSpecies(layer);
-                                                                }}
-                                                                sx={{
-                                                                    color: greenTheme.textSecondary,
-                                                                    padding: '4px',
+                                                                '& .MuiChip-deleteIcon': {
+                                                                    color: isSelected ? 'white' : greenTheme.textSecondary,
                                                                     '&:hover': {
-                                                                        backgroundColor: alpha(greenTheme.primary, 0.15),
-                                                                        color: greenTheme.primaryDark
+                                                                        color: isSelected ? alpha('#fff', 0.8) : greenTheme.primaryDark,
                                                                     }
-                                                                }}
-                                                            >
-                                                                <InfoOutlinedIcon fontSize="small" sx={{ fontSize: '16px' }} />
-                                                            </IconButton>
-                                                        )}
-                                                    </Box>
-
-                                                    {layerIndex < group.children.length - 1 && (
-                                                        <Divider
-                                                            sx={{
-                                                                my: 0.5,
-                                                                backgroundColor: alpha(greenTheme.primary, 0.1)
+                                                                }
                                                             }}
                                                         />
-                                                    )}
-                                                </Box>
-                                            );
-                                        })}
-                                    </Box>
+                                                    );
+                                                })}
+                                            </Box>
+                                        </Box>
+                                    )}
                                 </AccordionDetails>
                             </Accordion>
                         );

@@ -10,7 +10,17 @@ export default function MapView() {
   const map = useRef(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   
-  const { layers, groups, loadLayer, toggleLayer, toggleGroup } = useMapLayers(map, layerGroups);
+  const { 
+    layers, 
+    groups, 
+    loadLayer, 
+    toggleLayer, 
+    toggleGroup,
+    selectedSubspecies,
+    toggleSubspeciesSelection,
+    activeSource,
+    handleSourceChange
+  } = useMapLayers(map, layerGroups);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -52,6 +62,10 @@ export default function MapView() {
         groups={groups}
         toggleLayer={toggleLayer}
         toggleGroup={toggleGroup}
+        selectedSubspecies={selectedSubspecies}
+        onSubspeciesSelect={toggleSubspeciesSelection}
+        activeSource={activeSource}
+        onSourceChange={handleSourceChange}
       />
     </div>
   );
