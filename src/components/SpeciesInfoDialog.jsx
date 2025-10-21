@@ -85,7 +85,19 @@ export default function SpeciesInfoDialog({ open, species, onClose }) {
             </DialogTitle>
 
             {/* Content */}
-            <DialogContent sx={{ pt: 3 }}>
+            <DialogContent sx={{ 
+                pt: 3,
+                '&::-webkit-scrollbar': {
+                    width: '8px',
+                },
+                '&::-webkit-scrollbar-track': {
+                    backgroundColor: greenTheme.primaryLight,
+                },
+                '&::-webkit-scrollbar-thumb': {
+                    backgroundColor: greenTheme.primary,
+                    borderRadius: '4px',
+                }
+            }}>
                 {/* Image with Blurhash */}
                 {species.info?.imageUrl && (
                     <Box
@@ -152,14 +164,45 @@ export default function SpeciesInfoDialog({ open, species, onClose }) {
                         <Typography variant="subtitle2" sx={{ color: greenTheme.primaryDark, mb: 1, fontWeight: 600 }}>
                             Distribution Range
                         </Typography>
-                        <Typography variant="body2" sx={{ color: greenTheme.text }}>
-                            {species.info.distribution}
-                        </Typography>
+                        <Box 
+                            component="div"
+                            sx={{ 
+                                color: greenTheme.text,
+                                fontSize: '0.875rem',
+                                lineHeight: 1.6,
+                                '& p': {
+                                    margin: 0,
+                                    marginBottom: '1em',
+                                    '&:last-child': {
+                                        marginBottom: 0
+                                    }
+                                }
+                            }}
+                            dangerouslySetInnerHTML={{ 
+                                __html: (() => {
+                                    const text = species.info.distribution;
+                                    // If already has <p> tags, use as is
+                                    if (text.includes('<p>')) {
+                                        return text;
+                                    }
+                                    // If has double line breaks, split by them
+                                    if (text.includes('\n\n')) {
+                                        return text
+                                            .split('\n\n')
+                                            .filter(p => p.trim())
+                                            .map(p => `<p>${p.trim()}</p>`)
+                                            .join('');
+                                    }
+                                    // Otherwise, just wrap in a single p tag
+                                    return `<p>${text}</p>`;
+                                })()
+                            }}
+                        />
                     </Box>
                 )}
 
                 {/* Additional Info Chips */}
-                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
                     {species.info?.habitat && (
                         <Chip
                             label={`Habitat: ${species.info.habitat}`}
@@ -175,6 +218,27 @@ export default function SpeciesInfoDialog({ open, species, onClose }) {
                         />
                     )}
                 </Box>
+
+                {/* Source Attribution */}
+                {species.info?.source && (
+                    <Box
+                        sx={{
+                            mt: 'auto',
+                            pt: 1,
+                            borderTop: `1px solid ${alpha(greenTheme.text, 0.1)}`
+                        }}
+                    >
+                        <Typography
+                            variant="caption"
+                            sx={{
+                                color: alpha(greenTheme.text, 0.6),
+                                fontSize: '0.75rem'
+                            }}
+                        >
+                            Source: {species.info.source}
+                        </Typography>
+                    </Box>
+                )}
             </DialogContent>
 
             {/* Footer */}

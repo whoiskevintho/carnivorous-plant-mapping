@@ -1,3 +1,52 @@
+// Helper function to generate progressive shades from a base color
+const generateShades = (baseColor, numShades, direction = 'darker') => {
+  // Convert hex to RGB
+  const hexToRgb = (hex) => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  };
+
+  // Convert RGB to hex
+  const rgbToHex = (r, g, b) => {
+    return '#' + [r, g, b].map(x => {
+      const hex = Math.round(Math.max(0, Math.min(255, x))).toString(16);
+      return hex.length === 1 ? '0' + hex : hex;
+    }).join('');
+  };
+
+  const rgb = hexToRgb(baseColor);
+  const shades = [];
+  
+  for (let i = 0; i < numShades; i++) {
+    let shade;
+    if (direction === 'lighter') {
+      // Mix with white to create lighter shades
+      // i=0 is lightest (70% white), i=numShades-1 is darkest (base color)
+      const whiteMix = 0.7 - ((i / (numShades - 1)) * 0.7);
+      shade = rgbToHex(
+        rgb.r + (255 - rgb.r) * whiteMix,
+        rgb.g + (255 - rgb.g) * whiteMix,
+        rgb.b + (255 - rgb.b) * whiteMix
+      );
+    } else {
+      // Darken the color
+      const factor = 1 - ((i / (numShades - 1)) * 0.6);
+      shade = rgbToHex(
+        rgb.r * factor,
+        rgb.g * factor,
+        rgb.b * factor
+      );
+    }
+    shades.push(shade);
+  }
+  
+  return shades;
+};
+
 // Define colors for each species
 const SPECIES_COLORS = {
   alata: '#E63946',
@@ -31,9 +80,12 @@ export const layerGroups = [
       blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
       photographer: '2009 Barry Rice',
       sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287585&one=T',
-      distribution: 'Native to the southeastern United States. Found in scattered populations from North Carolina to the Florida Panhandle and Mississippi. Prefers acidic, nutrient-poor wetlands.',
+      distribution: `Sarracenia alata exhibits a two-zoned distribution. The eastern range extends from western Alabama, across coastal Mississippi, and into the far eastern parishes of Louisiana. The western range occurs in western Louisiana and extends into the Big Thicket region of eastern Texas, where populations are scattered and less common. A 225 km gap in central Louisiana separates these eastern and western populations, creating reproductive isolation between the two zones.
+
+      In the western part of the range, certain populations produce smaller, stout, and densely pubescent pitchers, commonly known in cultivation as "stocky" or "short" forms. It is uncertain whether these plants represent environmental adaptations (ecophenes) or a stable morphological variant. Additionally, some western populations, particularly in Angelina, Newton, and Jasper counties (Texas) and Natchitoches and Beauregard Parishes (Louisiana), exhibit faint areoles (light patches) near the tops of their pitchers, a feature less typical of the species elsewhere.`,
       habitat: 'Seepage bogs, wet pine flatwoods',
-      conservationStatus: 'Endangered'
+      conservationStatus: 'Endangered',
+      source: "McPherson, S., & Schnell, D. E. (2011). Sarraceniaceae of North America. Redfern Natural History Productions. ISBN 978-0-9558918-6-1."
     },
     children: [
       {
@@ -42,20 +94,35 @@ export const layerGroups = [
         commonName: 'Pale Pitcher Plant',
         visible: false,
         type: 'fill',
-        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
-        paint: {
-          'fill-color': SPECIES_COLORS.rubra,
-          'fill-opacity': 0.6,
-          'fill-outline-color': '#000'
-        },
+        dataUrl: '/data/Sarracenia_alata_heatmap.geojson',
+        paint: (() => {
+          // Generate 3 progressively lighter shades from the base color
+          const shades = generateShades(SPECIES_COLORS.alata, 3, 'lighter');
+          return {
+            'fill-color': [
+              'match',
+              ['get', 'ID'], // Get the ID property from each feature
+              1, shades[0],  // Lightest shade for ID 1
+              2, shades[1],  // Medium shade for ID 2
+              3, shades[2],  // Darkest shade for ID 3
+              SPECIES_COLORS.alata // Default fallback color
+            ],
+            'fill-opacity': 0.6,
+            'fill-outline-color': '#000'
+          };
+        })(),
         info: {
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2304.jpeg',
           blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
           photographer: '2009 Barry Rice',
           sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287546&one=T',
-          distribution: 'Limited to coastal areas of Alabama, Mississippi, and the western Florida Panhandle. One of the rarest Sarracenia varieties.',
-          habitat: 'Coastal plain seepage bogs',
-          conservationStatus: 'Critically Endangered'
+          distribution: `Sarracenia alata var. alata is the predominant form of the species across its range and remains common even in disturbed habitats, including highway ditches along Interstate 10 where water accumulates.
+          <br/>
+          <br/>
+          Although the species has been lost from many historical sites due to habitat destruction, large, healthy populations persist in several protected areas where prescribed burning maintains suitable conditions. These include the De Soto National Forest and Sandhill Crane National Wildlife Refuge in Mississippi, as well as the Big Thicket region of Texas. Because of these strongholds, the overall outlook for the species’ survival in the wild remains relatively positive.`,
+          habitat: 'Seepage bogs, wet pine flatwoods',
+          conservationStatus: 'Endangered',
+          source: "McPherson, S., & Schnell, D. E. (2011). Sarraceniaceae of North America. Redfern Natural History Productions. ISBN 978-0-9558918-6-1."
         }
       },
       {
@@ -75,9 +142,10 @@ export const layerGroups = [
           blurhash: 'L2D,0l~m0ntT}dM+~S9502MP$%%F',
           photographer: '2009 Barry Rice',
           sourceUrl: 'https://www.sarracenia.com/faq/faq5524.html',
-          distribution: 'Endemic to a small area in southern Mississippi and Louisiana. Discovered relatively recently and remains poorly studied.',
+          distribution: "Sarracenia populations are widespread but localized in Mississippi and eastern Louisiana. Their presence in the western part of the species’ range remains uncertain. Stable, extensive populations continue to thrive in well-protected sites such as the De Soto National Forest and the Sandhill Crane National Wildlife Refuge in Mississippi.",
           habitat: 'Roadside ditches, wet pine flatwoods',
-          conservationStatus: 'Endangered'
+          conservationStatus: 'Endangered',
+          source: "McPherson, S., & Schnell, D. E. (2011). Sarraceniaceae of North America. Redfern Natural History Productions. ISBN 978-0-9558918-6-1."
         }
       },
       {
