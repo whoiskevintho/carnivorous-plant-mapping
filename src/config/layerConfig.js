@@ -15,6 +15,8 @@ const SPECIES_COLORS = {
 // Default source citation
 const DEFAULT_SOURCE = "McPherson, S., & Schnell, D. E. (2011). Sarraceniaceae of North America. Redfern Natural History Productions. ISBN 978-0-9558918-6-1.";
 
+const SARRACENIA_VIEWING_LOCATIONS = "/data/Sarracenia_viewing_locations.geojson";
+
 // Organized layer configuration with hierarchy
 export const layerGroups = [
   // SARRACENIA ALATA
@@ -39,7 +41,7 @@ export const layerGroups = [
       createDistributionSource({
         id: 'sarracenia-alata-source-general',
         name: 'general',
-        year: '2025',
+        year: '',
         dataUrl: '/data/Sarracenia_alata.geojson',
         citation: DEFAULT_SOURCE,
         type: 'fill',
@@ -69,9 +71,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-var-alata',
         name: 'S. alata var. alata',
         commonName: 'Pale Pitcher Plant',
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
-        filter: { field: 'unique_id', values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
         paintType: 'heatmap',
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2304.jpeg',
@@ -91,9 +93,9 @@ export const layerGroups = [
         id: 'sarracenia-rubra-var-atrorubra',
         name: 'S.alata var. atrorubra',
         commonName: 'looking for common name',
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.yellow,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         paintType: 'heatmap',
         info: createInfo({
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarraalata016.jpg',
@@ -109,9 +111,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-var-cuprea',
         name: 'S.alata var. cuprea',
         commonName: "Sarracenia alata 'copper top'",
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.purple,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         info: createInfo({
           imageUrl: '/images/3127_McPherson_alata_cuprea.jpeg',
           photographer: '2011 McPherson',
@@ -129,9 +131,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-var-nigropurpurea',
         name: 'S.alata var. nigropurpurea',
         commonName: "Sarracenia alata 'black'",
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.pink,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         info: createInfo({
           imageUrl: 'https://files.ekmcdn.com/hampshirecarni/images/sa007-sarracenia-alata-purple-tube-3209-p.jpeg?v=A0A524E4-EFA4-4219-B0A8-B7DAE5F14939',
           photographer: 'need to source this',
@@ -145,9 +147,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-var-ornata',
         name: 'S.alata var. ornata',
         commonName: "Sarracenia alata 'heavy veined'",
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.orange,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0406/1349.jpeg',
           photographer: '2006 Barry Rice',
@@ -161,9 +163,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-var-rubrioperculata',
         name: 'S.alata var. rubrioperculata',
         commonName: "Sarracenia alata 'cut throat'",
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.green,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2320.jpeg',
           photographer: '2009 Barry Rice',
@@ -177,9 +179,9 @@ export const layerGroups = [
         id: 'sarracenia-alata-f-viridescens',
         name: 'S.alata var. viridescens',
         commonName: "Sarracenia alata 'antho-free'",
-        dataUrl: '/data/Sarracenia_viewing_locations.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.darkblue,
-        filter: { field: 'unique_id', values: [3, 4, 5] },
+        filter: { field: 'unique_id', values: [0, 1, 2, 3, 4, 5] },
         info: createInfo({
           imageUrl: '/images/McPherson_alata_f_viridescens.jpg',
           photographer: '2004 McPherson',
@@ -208,13 +210,43 @@ export const layerGroups = [
       habitat: 'Wet pine savannas, bogs',
       conservationStatus: 'Vulnerable'
     }),
+    sources: [
+      createDistributionSource({
+        id: 'sarracenia-flava-source-general',
+        name: 'general',
+        year: '',
+        dataUrl: '/data/Sarracenia_flava.geojson',
+        citation: DEFAULT_SOURCE,
+        type: 'fill',
+        paintType: 'standard'
+      }),
+      createDistributionSource({
+        id: 'sarracenia-alata-source-mcpherson',
+        name: 'McPherson & Schnell',
+        year: '2011',
+        dataUrl: '/data/S_flava_distribution_McPhersonSchnell2011.geojson',
+        citation: DEFAULT_SOURCE,
+        type: 'fill',
+        paintType: 'presence'
+      }),
+      createDistributionSource({
+        id: 'sarracenia-alata-source-heatmap',
+        name: 'GBIF Heatmap',
+        year: '2024',
+        dataUrl: '/data/Sarracenia_flava_heatmap.geojson',
+        citation: 'Aggregated occurrence data from field surveys',
+        type: 'fill',
+        paintType: 'heatmap'
+      })
+    ],
     children: [
       createVarietyLayer({
         id: 'sarracenia-flava-var-flava',
         name: 'S.flava var. flava',
         commonName: "Sarracenia flava 'typical'",
-        dataUrl: '/data/Sarracenia_flava.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
+        filter: { field: 'id', values: [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 26, 28, 29, 30] },
         info: createInfo({
           imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sarracenia_flava_-_Sardis_Lake%2C_Mississippi.jpg/800px-Sarracenia_flava_-_Sardis_Lake%2C_Mississippi.jpg',
           photographer: '',
@@ -228,8 +260,9 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-atropurpurea',
         name: 'S. flava var. atropurpurea',
         commonName: "Sarracenia flava 'all red'",
-        dataUrl: '/data/Sarracenia_flava_var_atropurpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
+        filter: { field: 'unique_id', values: [13, 14, 15] },
         info: createInfo({
           imageUrl: 'https://live.staticflickr.com/65535/50098846638_ceaa7169b6_3k.jpg',
           blurhash: 'LHI}zAJ%pVRl?:RBR-Rnk*ocoJXQ',
@@ -244,8 +277,9 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-cuprea',
         name: 'S. flava var. cuprea',
         commonName: "Sarracenia flava 'copper top'",
-        dataUrl: '/data/Sarracenia_flava_var_atropurpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
+        filter: { field: 'unique_id', values: [13, 14, 15] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3127.jpeg',
           blurhash: 'LAFOSLJA5qXO}nNxJ8$$5W9weo=c',
@@ -260,8 +294,9 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-maxima',
         name: 'S. flava var. maxima',
         commonName: "Sarracenia flava 'all green'",
-        dataUrl: '/data/Sarracenia_flava_var_atropurpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
+        filter: { field: 'unique_id', values: [13, 14, 15] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3061.jpeg',
           blurhash: 'LAFOSLJA5qXO}nNxJ8$$5W9weo=c',
@@ -276,7 +311,7 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-ornata',
         name: 'S. flava var. ornata',
         commonName: "Sarracenia flava 'heavy veined'",
-        dataUrl: '/data/Sarracenia_flava_var_atropurpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3141.jpeg',
@@ -292,7 +327,7 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-rubricorpora',
         name: 'S. flava var. rubricorpora',
         commonName: 'Red-Throat Pitcher Plant',
-        dataUrl: '/data/Sarracenia_flava_var_rubricorpora.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1319.jpeg',
@@ -308,7 +343,7 @@ export const layerGroups = [
         id: 'sarracenia-flava-var-rugelii',
         name: 'S. flava var. rugelii',
         commonName: "Rugel's Pitcher Plant",
-        dataUrl: '/data/Sarracenia_flava_var_rugelii.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1329.jpeg',
@@ -323,7 +358,7 @@ export const layerGroups = [
         id: 'sarracenia-flava-f-viridescens',
         name: 'S. flava f. viridescens',
         commonName: "Sarracenia flava 'anthocyanin-free'",
-        dataUrl: '/data/Sarracenia_flava_var_rugelii.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: '/images/McPherson_flava_f_viridescens.jpg',
