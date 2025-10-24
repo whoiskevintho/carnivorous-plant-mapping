@@ -773,9 +773,9 @@ export const layerGroups = [
     color: SPECIES_COLORS.orange,
     dataUrl: '/data/Sarracenia_psittacina.geojson',
     info: createInfo({
-      imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/userimg/userimg_263222.jpg',
-      photographer: 'Scott Ward',
-      sourceUrl: 'https://fsus.ncbg.unc.edu/cust/2024/main.php?pg=show-taxon.php&plantname=sarracenia+psitt',
+      imageUrl: 'https://inaturalist-open-data.s3.amazonaws.com/photos/521412100/original.jpg',
+      photographer: 'iNaturlist user triiothyrocide',
+      sourceUrl: 'https://www.inaturalist.org/observations/289877706',
       distribution: `The range of Sarracenia psittacina extends from a single county in South Carolina, through southern Georgia and northeastern Florida, across the Florida Panhandle and lower Alabama and Mississippi, 
       and just into two parishes in Louisiana. Although the number of known sites has declined, populations of this species remain extant throughout much of its original range. This persistence is partly due to the species’ 
       greater tolerance of disturbances that severely impact other Sarracenia species, for example - periodic roadside mowing. Sarracenia psittacina inhabits wet savannas, open wet longleaf pine forests, hillside seeps, sphagnum bogs, 
@@ -818,7 +818,8 @@ export const layerGroups = [
         id: 'sarracenia-psittacina-var-psittacina',
         name: 'S. psittacina var. psittacina',
         commonName: 'Parrot Pitcher Plant',
-        dataUrl: '/data/Sarracenia_psittacina.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [0, 1, 2, 3, 4, 12, 13, 14, 15, 16, 17 ,18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 34, 39, 40, 67, 68, 69, 70, 96] },
         color: SPECIES_COLORS.orange,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1275.jpeg',
@@ -838,13 +839,14 @@ export const layerGroups = [
         id: 'sarracenia-psittacina-var-psittacina-f-viridescens',
         name: 'S. psittacina var. psittacina f. viridescens',
         commonName: 'Parrot Pitcher Plant antho-free',
-        dataUrl: '/data/Sarracenia_psittacina.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [19, 30] },
         color: SPECIES_COLORS.orange,
         info: createInfo({
-          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_09583.jpg',
+          imageUrl: 'https://www.hccarnivorousplants.co.uk/cdn/shop/products/C9BDCC03-E042-4E19-B790-C68343040468_940x.jpg?v=1690625688',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
-          photographer: 'needs attribution',
-          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon-detail.php&taxonid=65715',
+          photographer: 'Hewitt-Cooper Carnivorous Plants',
+          sourceUrl: 'https://www.hccarnivorousplants.co.uk/products/sarracenia-psittacina-f-viridescens-wewahatchicka-fl?srsltid=AfmBOooAD0m1MDac6NswnX9JmQt_mn1bopWnjnrzik5Q5SbvQz6pZ1pM',
           distribution: `Specimens of this form have been documented historically in Florida and Alabama, particularly in northern Florida within swamp habitats across the Apalachicola National 
           Forest and at former sites along the Yellow River, where it is now extirpated. Remaining populations are small and scattered, and due to their rarity and high horticultural demand, 
           these stands must be closely monitored to protect them from poaching and further decline.`,
@@ -857,12 +859,13 @@ export const layerGroups = [
         id: 'sarracenia-psittacina-var-okefenokeensis',
         name: 'S. psittacina var. okefenokeensis',
         commonName: 'Parrot Pitcher Plant',
-        dataUrl: '/data/Sarracenia_psittacina.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [32, 33] },
         color: SPECIES_COLORS.orange,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_09583.jpg',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
-          photographer: 'needs attribution',
+          photographer: '2010 Scott Ward',
           sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon-detail.php&taxonid=65715',
           distribution: `Extensive populations of Sarracenia psittacina var. okefenokeensis occur across the Chesser Prairie region within the Okefenokee National Wildlife Refuge. 
           This variety typically grows in very wet environments, often in association with sphagnum moss. It commonly inhabits floating prairies and sphagnum moss rafts. 
@@ -879,13 +882,14 @@ export const layerGroups = [
         id: 'sarracenia-psittacina-var-okefenokeensis-f-luteoviridis',
         name: 'S. psittacina var. okefenokeensis f. luteoviridis',
         commonName: 'Parrot Pitcher Plant',
-        dataUrl: '/data/Sarracenia_psittacina.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [32, 33] },
         color: SPECIES_COLORS.orange,
         info: createInfo({
-          imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_09583.jpg',
+          imageUrl: 'https://live.staticflickr.com/65535/50168428942_01f3c8f308_c.jpg',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
-          photographer: 'needs attribution',
-          sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon-detail.php&taxonid=65715',
+          photographer: '2020 Mike Wang',
+          sourceUrl: 'https://sarracenia.proboards.com/thread/930/psittacina-var-okefenokeensis-luteoviridis',
           distribution: `Small stands of this form have been documented growing alongside Sarracenia psittacina var. okefenokeensis within the Okefenokee National Wildlife Refuge in Georgia. 
           It is uncertain whether wild populations of this rare variant still persist, but if any do, they should be closely monitored due to the heightened risk of poaching driven by strong horticultural interest in this distinctive plant.`,
           habitat: 'Coastal plain seepage bogs',
@@ -951,7 +955,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-pupurea',
         name: 'S. pupurea ssp. pupurea',
         commonName: 'Northern Purple Pitcher Plant',
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [65, 73, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://static.inaturalist.org/photos/83887520/large.jpg',
@@ -972,7 +977,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-pupurea-f-heterophylla',
         name: 'S. pupurea ssp. pupurea f. heterophylla',
         commonName: "Purple Pitcher Plant 'Antho-free'",
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [90, 91, 92, 93, 94] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://farm8.staticflickr.com/7404/9442429926_b1235a7664.jpg',
@@ -992,7 +998,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-venosa-var-venosa',
         name: 'S. pupurea ssp. venosa var. venosa',
         commonName: 'Purple Pitcher Plant',
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 72, 73, 74] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_04648.jpg',
@@ -1016,7 +1023,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-venosa-var-venosa-f-pallidiflora',
         name: 'S. pupurea ssp. venosa var. venosa f. pallidiflora',
         commonName: "Sarracenia Purpurea ssp. Venosa 'Antho-free'",
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarrapurp2003.jpg',
@@ -1032,7 +1040,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-venosa-var-burkii',
         name: 'S. pupurea ssp. venosa var. burkii',
         commonName: "Burk's Pitcher Plant",
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [4, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 34] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/userimg/userimg_301712.jpg',
@@ -1051,7 +1060,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-venosa-var-burkii-f-luteola',
         name: 'S. pupurea ssp. venosa var. burkii f. luteola',
         commonName: "Burk's Pitcher Plant 'Antho-free'",
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [23, 25, 30, 34, 67] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarrarose2001.jpg',
@@ -1068,7 +1078,8 @@ export const layerGroups = [
         id: 'sarracenia-pupurea-ssp-venosa-var-montana',
         name: 'S. pupurea ssp. venosa var. montana',
         commonName: 'Mountain Purple Pitcher Plant',
-        dataUrl: '/data/Sarracenia_purpurea.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [42, 43, 44] },
         color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_07864.jpg',
@@ -1096,7 +1107,7 @@ export const layerGroups = [
     name: 'Sarracenia rubra',
     commonName: 'Sweet Pitcher Plant',
     color: SPECIES_COLORS.darkblue,
-    dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+    dataUrl: '/data/Sarracenia_rubra.geojson',
     info: createInfo({
       imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2576.jpeg',
       photographer: '2009 Barry Rice',
@@ -1106,12 +1117,42 @@ export const layerGroups = [
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
+    sources: [
+      createDistributionSource({
+        id: 'sarracenia-rubra-source-general',
+        name: 'general',
+        year: '',
+        dataUrl: '/data/Sarracenia_rubra.geojson',
+        citation: DEFAULT_SOURCE,
+        type: 'fill',
+        paintType: 'standard'
+      }),
+      createDistributionSource({
+        id: 'sarracenia-rubra-source-mcpherson',
+        name: 'McPherson & Schnell',
+        year: '2011',
+        dataUrl: '/data/S_rubra_distribution_McPhersonSchnell2011.geojson',
+        citation: DEFAULT_SOURCE,
+        type: 'fill',
+        paintType: 'presence'
+      }),
+      createDistributionSource({
+        id: 'sarracenia-rubra-source-heatmap',
+        name: 'GBIF Heatmap',
+        year: '2024',
+        dataUrl: '/data/Sarracenia_rubra_heatmap.geojson',
+        citation: 'Aggregated occurrence data from field surveys',
+        type: 'fill',
+        paintType: 'heatmap'
+      })
+    ],
     children: [
       createVarietyLayer({
         id: 'sarracenia-rubra-var-rubra',
         name: 'S.rubra var. rubra',
         commonName: 'Sweet Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [35, 36, 37, 38, 46, 47, 49, 50, 51, 52, 53, 54] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2576.jpeg',
@@ -1128,8 +1169,9 @@ export const layerGroups = [
       createVarietyLayer({
         id: 'sarracenia-rubra-ssp-alabamensis',
         name: 'S. rubra ssp. alabamensis',
-        commonName: 'Alabama Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
+        commonName: 'Alabama Canebrake Pitcher Plant',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [95] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_03759.jpg',
@@ -1148,7 +1190,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-ssp-gulfensis',
         name: 'S. rubra ssp. gulfensis',
         commonName: 'Gulf Coast Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [13, 14, 15, 18, 19, 26, 57] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
@@ -1168,7 +1211,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-ssp-gulfensis-f-luteoviridis',
         name: 'S. rubra ssp. gulfensis f. luteoviridis',
         commonName: 'Gulf Coast Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_subsp_gulfensis.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [13, 14, 15, 18, 19, 26, 57] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
@@ -1187,7 +1231,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-ssp-jonesii',
         name: 'S.rubra ssp. jonesii',
         commonName: 'Mountain Sweer Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [43, 44] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
@@ -1212,7 +1257,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-ssp-jonesii-f-viridescens',
         name: 'S.rubra ssp. jonesii f. viridescens',
         commonName: "Mountain Sweer Pitcher Plant 'Antho-free'",
-        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [43, 44] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
@@ -1232,7 +1278,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-ssp-wherryi',
         name: 'S.rubra ssp. wherryi',
         commonName: "not sure what to call this",
-        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [16, 24, 55, 67] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_07077.jpg',
@@ -1256,7 +1303,8 @@ export const layerGroups = [
         id: 'sarracenia-rubra-var-viatorum',
         name: 'S.rubra var. viatorum',
         commonName: 'Roadside Pitcher Plant',
-        dataUrl: '/data/Sarracenia_rubra_viatorum.geojson',
+        dataUrl: SARRACENIA_VIEWING_LOCATIONS,
+        filter: { field: 'id', values: [48, 96] },
         color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2571.jpeg',
