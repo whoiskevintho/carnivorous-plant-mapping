@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getAllLayers } from '../config/layerConfig';
 import maplibregl from 'maplibre-gl';
 import { generateShades } from '../utils/colorUtils';
@@ -18,6 +18,12 @@ export const useMapLayers = (map, layerGroups) => {
       return acc;
     }, {})
   );
+  
+  // Track popup for cleanup
+  const clickPopupRef = useRef(null);
+  
+  // Helper to get label layer ID
+  const getLabelLayerId = (layerId) => `${layerId}-label`;
 
   // Load GeoJSON data and add to map
   const loadLayer = async (layer) => {
@@ -175,6 +181,13 @@ export const useMapLayers = (map, layerGroups) => {
         map.current.setLayoutProperty(subspeciesId, 'visibility', 'visible');
         // Move to top of layer stack (most recently selected on top)
         map.current.moveLayer(subspeciesId);
+        
+        // Also show and move the label layer if it exists
+        const labelLayerId = getLabelLayerId(subspeciesId);
+        if (map.current.getLayer(labelLayerId)) {
+          map.current.setLayoutProperty(labelLayerId, 'visibility', 'visible');
+          map.current.moveLayer(labelLayerId);
+        }
         return;
       }
 
@@ -224,6 +237,31 @@ export const useMapLayers = (map, layerGroups) => {
 
       // Add layer - will be at top of stack by default
       map.current.addLayer(layerConfig);
+      
+      // Add interactive features for point layers
+      if (isPoint) {
+        // Add text label layer for point names
+        map.current.addLayer({
+          id: getLabelLayerId(subspeciesId),
+          type: 'symbol',
+          source: subspeciesId,
+          layout: {
+            'text-field': ['get', 'name'],
+            'text-font': ['Open Sans Regular'],
+            'text-size': 12,
+            'text-offset': [0, -1.5],
+            'text-anchor': 'bottom'
+          },
+          paint: {
+            'text-color': '#000000',
+            'text-halo-color': '#FFFFFF',
+            'text-halo-width': 2,
+            'text-halo-blur': 1
+          }
+        });
+        
+        addPointInteractions(subspeciesId);
+      }
     } catch (error) {
       // Silently handle if layer/source already exists, otherwise log
       if (!error.message?.includes('already exists')) {
@@ -232,15 +270,80 @@ export const useMapLayers = (map, layerGroups) => {
     }
   };
 
+  // Add hover and click interactions for point layers
+  const addPointInteractions = (layerId) => {
+    if (!map.current) return;
+
+    // Change cursor to pointer on hover
+    map.current.on('mouseenter', layerId, () => {
+      map.current.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.current.on('mouseleave', layerId, () => {
+      map.current.getCanvas().style.cursor = '';
+    });
+
+    // Show persistent popup with link on click
+    map.current.on('click', layerId, (e) => {
+      if (e.features.length > 0) {
+        const feature = e.features[0];
+        const name = feature.properties.name;
+        const link = feature.properties.link;
+        
+        // Remove existing click popup
+        if (clickPopupRef.current) {
+          clickPopupRef.current.remove();
+        }
+        
+        // Build popup HTML
+        const popupHTML = `
+          <div class="popup-container">
+            <div class="popup-title ${link ? 'popup-title-with-link' : ''}">${name}</div>
+            ${link ? `
+              <div class="popup-divider"></div>
+              <a href="${link}" target="_blank" rel="noopener noreferrer" class="popup-link">
+                Visit Website
+                <svg class="popup-icon" viewBox="0 0 24 24">
+                  <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                </svg>
+              </a>` : ''}
+          </div>`;
+        
+        // Create persistent popup
+        clickPopupRef.current = new maplibregl.Popup({
+          closeButton: true,
+          closeOnClick: false,
+          className: 'location-popup'
+        })
+          .setLngLat(e.lngLat)
+          .setHTML(popupHTML)
+          .addTo(map.current);
+      }
+    });
+  };
+
   // Remove subspecies layer
   const removeSubspeciesLayer = (subspeciesId) => {
     if (!map.current) return;
+
+    // Clean up any open popups
+    if (clickPopupRef.current) {
+      clickPopupRef.current.remove();
+      clickPopupRef.current = null;
+    }
 
     // Instead of removing, just hide it for better performance
     if (map.current.getLayer(subspeciesId)) {
       map.current.setLayoutProperty(subspeciesId, 'visibility', 'none');
     }
-    // Keep both source and layer for quick re-selection
+    
+    // Also hide the label layer if it exists
+    const labelLayerId = getLabelLayerId(subspeciesId);
+    if (map.current.getLayer(labelLayerId)) {
+      map.current.setLayoutProperty(labelLayerId, 'visibility', 'none');
+    }
+    
+    // Keep both source and layers for quick re-selection
   };
 
   // Focus camera on selected subspecies
