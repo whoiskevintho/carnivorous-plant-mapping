@@ -329,6 +329,7 @@ export default function LayerPanel({
                                             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                                                 {group.children.map((layer) => {
                                                     const isSelected = isSubspeciesSelected(layer.id);
+                                                    const varietyColor = layer.color || group.color; // Use variety's color, fallback to group color
                                                     return (
                                                         <Chip
                                                             key={layer.id}
@@ -341,16 +342,16 @@ export default function LayerPanel({
                                                             deleteIcon={layer.info ? <InfoOutlinedIcon fontSize="small" /> : undefined}
                                                             variant={isSelected ? "filled" : "outlined"}
                                                             sx={{
-                                                                backgroundColor: isSelected ? group.color : 'transparent',
-                                                                borderColor: group.color,
+                                                                backgroundColor: isSelected ? varietyColor : 'transparent',
+                                                                borderColor: varietyColor,
                                                                 color: isSelected ? 'white' : greenTheme.text,
                                                                 fontWeight: isSelected ? 600 : 400,
                                                                 fontSize: '0.8rem',
-                                                                boxShadow: isSelected ? `0 0 12px ${alpha(group.color, 0.6)}` : 'none',
+                                                                boxShadow: isSelected ? `0 0 12px ${alpha(varietyColor, 0.6)}` : 'none',
                                                                 transition: 'all 0.3s ease',
                                                                 '&:hover': {
-                                                                    backgroundColor: isSelected ? group.color : alpha(group.color, 0.1),
-                                                                    boxShadow: `0 0 8px ${alpha(group.color, 0.4)}`,
+                                                                    backgroundColor: isSelected ? varietyColor : alpha(varietyColor, 0.1),
+                                                                    boxShadow: `0 0 8px ${alpha(varietyColor, 0.4)}`,
                                                                 },
                                                                 '& .MuiChip-deleteIcon': {
                                                                     color: isSelected ? 'white' : greenTheme.textSecondary,

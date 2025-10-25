@@ -10,6 +10,8 @@ const SPECIES_COLORS = {
   orange: '#F39C12',
   green: "#2ECC71",
   darkblue: '#3F51B5',
+  deepteal: '#00695C',
+  magenta: '#E040FB'
 };
 
 // Default source citation
@@ -260,7 +262,7 @@ export const layerGroups = [
         name: 'S.flava var. flava',
         commonName: "Sarracenia flava 'typical'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.yellow,
         filter: { field: 'id', values: [35, 38, 46, 47, 48, 49, 50, 51, 52, 53] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3070.jpeg',
@@ -285,7 +287,7 @@ export const layerGroups = [
         name: 'S. flava var. atropurpurea',
         commonName: "Sarracenia flava 'all red'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.purple,
         filter: { field: 'id', values: [38, 37, 30, 15, 55, 16] },
         info: createInfo({
           imageUrl: 'https://live.staticflickr.com/65535/50098846638_ceaa7169b6_3k.jpg',
@@ -310,7 +312,7 @@ export const layerGroups = [
         name: 'S. flava var. cuprea',
         commonName: "Sarracenia flava 'copper top'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.pink,
         filter: { field: 'id', values: [38, 36, 47, 37, 49] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3127.jpeg',
@@ -333,7 +335,7 @@ export const layerGroups = [
         name: 'S. flava var. maxima',
         commonName: "Sarracenia flava 'all green'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.orange,
         filter: { field: 'id', values: [33, 38, 36, 47, 37, 49] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3061.jpeg',
@@ -354,7 +356,7 @@ export const layerGroups = [
         name: 'S. flava var. ornata',
         commonName: "Sarracenia flava 'heavy veined'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.green,
         filter: { field: 'id', values: [38, 46, 30, 15, 55] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3141.jpeg',
@@ -374,7 +376,7 @@ export const layerGroups = [
         name: 'S. flava var. rubricorpora',
         commonName: 'Red-Throat Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.darkblue,
         filter: { field: 'id', values: [57, 55, 30] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1319.jpeg',
@@ -395,7 +397,7 @@ export const layerGroups = [
         name: 'S. flava var. rugelii',
         commonName: "Rugel's Pitcher Plant",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.magenta,
         filter: { field: 'id', values: [30, 15, 55, 17, 57, 14, 26, 33, 16, 13, 23] },
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1329.jpeg',
@@ -417,7 +419,7 @@ export const layerGroups = [
         name: 'S. flava f. viridescens',
         commonName: "Sarracenia flava 'anthocyanin-free'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
-        color: SPECIES_COLORS.lightblue,
+        color: SPECIES_COLORS.red,
         info: createInfo({
           imageUrl: '/images/McPherson_flava_f_viridescens.jpg',
           photographer: '2011 McPherson',
@@ -494,7 +496,7 @@ export const layerGroups = [
         commonName: 'White Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [15, 16, 23, 24, 25, 28, 29, 34, 13] },
-        color: SPECIES_COLORS.yellow,
+        color: SPECIES_COLORS.purple,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1349.jpeg',
           photographer: '2010 Barry Rice',
@@ -516,7 +518,7 @@ export const layerGroups = [
         commonName: "'White-topped' Pitcher Plant",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [24, 25, 34] },
-        color: SPECIES_COLORS.yellow,
+        color: SPECIES_COLORS.pink,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_06200.jpg',
           blurhash: 'LpGu%XkDM_of%%WYWAogXVWXt7og',
@@ -537,7 +539,7 @@ export const layerGroups = [
         commonName: "Sarracenia leucophylla Green",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [24, 25, 34] },
-        color: SPECIES_COLORS.yellow,
+        color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://live.staticflickr.com/65535/53609355769_f71a8622bb_5k.jpg',
           photographer: '2023 Mike Wang',
@@ -606,7 +608,7 @@ export const layerGroups = [
         commonName: 'Hooded Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [58, 17, 47, 27, 49, 59, 60, 61, 62, 63, 30] },
-        color: SPECIES_COLORS.purple,
+        color: SPECIES_COLORS.orange,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/1116/3055.jpeg',
           blurhash: 'LaF#=[xFX5jb~SRmNaWE-VRlRloM',
@@ -631,7 +633,7 @@ export const layerGroups = [
         commonName: "Sarracenia minor antho-free",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [17] },
-        color: SPECIES_COLORS.purple,
+        color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://farm4.staticflickr.com/3807/8918168677_a2f602f1dd_b.jpg',
           photographer: '2013 The Pitcher Plant Project',
@@ -656,7 +658,7 @@ export const layerGroups = [
         commonName: "Hooded Pitcher Plant",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [32, 33] },
-        color: SPECIES_COLORS.purple,
+        color: SPECIES_COLORS.red,
         info: createInfo({
           imageUrl: 'https://live.staticflickr.com/2260/2433216132_370d70b2bf_3k.jpg',
           blurhash: 'L9CPX.NN5a??x{tk.6aSA3%L%eIw',
@@ -728,7 +730,7 @@ export const layerGroups = [
         commonName: 'Green Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [64] },
-        color: SPECIES_COLORS.pink,
+        color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2537.jpeg',
           photographer: '2009 Barry Rice',
@@ -748,7 +750,7 @@ export const layerGroups = [
         commonName: 'Green Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [64] },
-        color: SPECIES_COLORS.pink,
+        color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://c1.staticflickr.com/1/970/41994212812_2cbfb099f9_b.jpg',
           photographer: 'needs attribution',
@@ -820,7 +822,7 @@ export const layerGroups = [
         commonName: 'Parrot Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [0, 1, 2, 3, 4, 12, 13, 14, 15, 16, 17 ,18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 34, 39, 40, 67, 68, 69, 70, 96] },
-        color: SPECIES_COLORS.orange,
+        color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0610/1275.jpeg',
           photographer: '2010 Barry Rice',
@@ -841,7 +843,7 @@ export const layerGroups = [
         commonName: 'Parrot Pitcher Plant antho-free',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [19, 30] },
-        color: SPECIES_COLORS.orange,
+        color: SPECIES_COLORS.red,
         info: createInfo({
           imageUrl: 'https://www.hccarnivorousplants.co.uk/cdn/shop/products/C9BDCC03-E042-4E19-B790-C68343040468_940x.jpg?v=1690625688',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
@@ -861,7 +863,7 @@ export const layerGroups = [
         commonName: 'Parrot Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [32, 33] },
-        color: SPECIES_COLORS.orange,
+        color: SPECIES_COLORS.yellow,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_09583.jpg',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
@@ -884,7 +886,7 @@ export const layerGroups = [
         commonName: 'Parrot Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [32, 33] },
-        color: SPECIES_COLORS.orange,
+        color: SPECIES_COLORS.purple,
         info: createInfo({
           imageUrl: 'https://live.staticflickr.com/65535/50168428942_01f3c8f308_c.jpg',
           blurhash: 'LCCYp-9cEgbY~SIrV@t6B6nl$gW-',
@@ -957,7 +959,7 @@ export const layerGroups = [
         commonName: 'Northern Purple Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [65, 73, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.darkblue,
         info: createInfo({
           imageUrl: 'https://static.inaturalist.org/photos/83887520/large.jpg',
           photographer: 'iNaturalist user mariaburke',
@@ -979,7 +981,7 @@ export const layerGroups = [
         commonName: "Purple Pitcher Plant 'Antho-free'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [90, 91, 92, 93, 94] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.red,
         info: createInfo({
           imageUrl: 'https://farm8.staticflickr.com/7404/9442429926_b1235a7664.jpg',
           photographer: '2013 Mike Wang',
@@ -1000,7 +1002,7 @@ export const layerGroups = [
         commonName: 'Purple Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [35, 36, 37, 38, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 72, 73, 74] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_04648.jpg',
           blurhash: 'LAEfDV?FR.xF}s9^SwnQX+OTwNaM',
@@ -1025,7 +1027,7 @@ export const layerGroups = [
         commonName: "Sarracenia Purpurea ssp. Venosa 'Antho-free'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.yellow,
         info: createInfo({
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarrapurp2003.jpg',
           photographer: '2018 Barry Rice',
@@ -1042,7 +1044,7 @@ export const layerGroups = [
         commonName: "Burk's Pitcher Plant",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [4, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 34] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.purple,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/userimg/userimg_301712.jpg',
           blurhash: 'L8GR|WvB03~kJ|rvnSIXAV%K,IR:',
@@ -1062,7 +1064,7 @@ export const layerGroups = [
         commonName: "Burk's Pitcher Plant 'Antho-free'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [23, 25, 30, 34, 67] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.pink,
         info: createInfo({
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarrarose2001.jpg',
           photographer: '2018 Barry Rice',
@@ -1080,7 +1082,7 @@ export const layerGroups = [
         commonName: 'Mountain Purple Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [42, 43, 44] },
-        color: SPECIES_COLORS.green,
+        color: SPECIES_COLORS.orange,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_07864.jpg',
           blurhash: 'L6EfDWOoKv=M.Ns;pU$RAHt5~8M|',
@@ -1153,7 +1155,7 @@ export const layerGroups = [
         commonName: 'Sweet Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [35, 36, 37, 38, 46, 47, 49, 50, 51, 52, 53, 54] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.magenta,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2576.jpeg',
           photographer: '2009 Barry Rice',
@@ -1172,7 +1174,7 @@ export const layerGroups = [
         commonName: 'Alabama Canebrake Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [95] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.green,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_03759.jpg',
           blurhash: 'L2E{8Ukz0q}Y01AH0,MN0p?C^@G8',
@@ -1192,7 +1194,7 @@ export const layerGroups = [
         commonName: 'Gulf Coast Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [13, 14, 15, 18, 19, 26, 57] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.orange,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
           photographer: '2009 Barry Rice',
@@ -1213,7 +1215,7 @@ export const layerGroups = [
         commonName: 'Gulf Coast Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [13, 14, 15, 18, 19, 26, 57] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.pink,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
           photographer: '2009 Barry Rice',
@@ -1233,7 +1235,7 @@ export const layerGroups = [
         commonName: 'Mountain Sweer Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [43, 44] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.purple,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
           photographer: 'Alan Cressler',
@@ -1259,7 +1261,7 @@ export const layerGroups = [
         commonName: "Mountain Sweer Pitcher Plant 'Antho-free'",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [43, 44] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.yellow,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
           photographer: 'Alan Cressler',
@@ -1280,7 +1282,7 @@ export const layerGroups = [
         commonName: "not sure what to call this",
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [16, 24, 55, 67] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.lightblue,
         info: createInfo({
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_07077.jpg',
           photographer: 'Alan Cressler',
@@ -1305,7 +1307,7 @@ export const layerGroups = [
         commonName: 'Roadside Pitcher Plant',
         dataUrl: SARRACENIA_VIEWING_LOCATIONS,
         filter: { field: 'id', values: [48, 96] },
-        color: SPECIES_COLORS.darkblue,
+        color: SPECIES_COLORS.red,
         info: createInfo({
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2571.jpeg',
           photographer: '2009 Barry Rice',
