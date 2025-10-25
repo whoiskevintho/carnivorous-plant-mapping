@@ -33,6 +33,23 @@ export default function MapView() {
     });
 
     map.current.on('load', () => {
+      // Add state/province boundaries as a base layer
+      map.current.addSource('state-boundaries', {
+        type: 'geojson',
+        data: '/data/States_outline.geojson'
+      });
+
+      map.current.addLayer({
+        id: 'state-boundaries-line',
+        type: 'line',
+        source: 'state-boundaries',
+        paint: {
+          'line-color': '#000000',
+          'line-width': 1,
+          'line-opacity': 0.3
+        }
+      });
+
       setMapLoaded(true);
     });
   }, []);

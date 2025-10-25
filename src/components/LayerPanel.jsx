@@ -18,7 +18,7 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import LayersIcon from '@mui/icons-material/Layers';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import SpeciesInfoDialog from './SpeciesInfoDialog';
 
 const greenTheme = {
@@ -252,7 +252,7 @@ export default function LayerPanel({
                                                 }
                                             }}
                                         >
-                                            <InfoOutlinedIcon fontSize="small" />
+                                            <ReadMoreIcon fontSize="small" />
                                         </Box>
                                     </Box>
                                 </AccordionSummary>
@@ -339,7 +339,7 @@ export default function LayerPanel({
                                                                 e.stopPropagation();
                                                                 setSelectedSpecies(layer);
                                                             } : undefined}
-                                                            deleteIcon={layer.info ? <InfoOutlinedIcon fontSize="small" /> : undefined}
+                                                            deleteIcon={layer.info ? <ReadMoreIcon fontSize="small" /> : undefined}
                                                             variant={isSelected ? "filled" : "outlined"}
                                                             sx={{
                                                                 backgroundColor: isSelected ? varietyColor : 'transparent',

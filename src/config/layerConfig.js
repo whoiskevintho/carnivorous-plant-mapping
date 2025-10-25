@@ -223,7 +223,7 @@ export const layerGroups = [
       Its range overlaps with nearly every other Sarracenia species except S. oreophila and S. alata, and it often hybridizes with most within its range—though not with S. psittacina, likely due to differences in flowering time. 
       The species’ distribution forms an arc from southeastern Virginia across the Atlantic and Gulf coastal plains through the Carolinas, Georgia, western Florida, and southeastern Alabama. 
       Once found in isolated inland populations on the Piedmont of North Carolina and in northern Florida, most of those have now disappeared.`,
-      habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
+      habitat: 'Seepage bogs, wet pine savannas',
       conservationStatus: 'Vulnerable',
       source: DEFAULT_SOURCE
     }),
@@ -277,7 +277,7 @@ export const layerGroups = [
           It often grows alongside var. maxima, with hybrids between the two showing reduced pigmentation. 
           Strongholds include the Green Swamp in North Carolina, as well as several protected sites like Croatan National Forest, Cartwheel Bay Preserve, Francis Marion National Forest, 
           Lewis Ocean Bay Heritage Preserve, Santee Coastal Preserve, and wetlands managed by Meadowview Biological Station in Virginia.`,
-          habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Vulnerable',
           source: DEFAULT_SOURCE
         })
@@ -302,7 +302,7 @@ export const layerGroups = [
           <br />
           Populations of Sarracenia flava var. atropurpurea are protected in several well-managed reserves, including the Green Swamp Nature Preserve and Maple Hill Preserve in North Carolina, 
           the Lewis Ocean Bay Heritage Preserve in South Carolina, and the Apalachicola National Forest, Blackwater River State Forest, and Conecuh National Forest in Florida.`,
-          habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -325,7 +325,7 @@ export const layerGroups = [
           Infraspecific hybrids involving S. flava var. cuprea, S. flava var. flava, and S. flava var. maxima are frequently observed in areas where these forms grow in close proximity. 
           Populations of Sarracenia flava var. cuprea are protected within several reserves, including the Green Swamp Nature Preserve in North Carolina, and in South Carolina at Cartwheel Bay Preserve, 
           Francis Marion National Forest, Lewis Ocean Bay Heritage Preserve, and Santee Coastal Preserve.`,
-          habitat: 'Seepage slopes, wet pine savannas',
+          habitat: 'Coastal plain seepage bogs and wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -346,7 +346,7 @@ export const layerGroups = [
           This variety is most common in the northern part of the species’ range, particularly along the Atlantic coastal plain of the Carolinas, and is rare or possibly absent from the Gulf Coast. 
           The Green Swamp Nature Preserve in North Carolina is a stronghold for this variety, with additional populations in the Cartwheel Bay Preserve, the Croatan National Forest, the Francis Marion National Forest, 
           and the Lewis Ocean Bay Heritage Preserve. It often grows alongside S. flava var. flava and S. flava var. cuprea, and infraspecific hybrids with these varieties may occur, typically identifiable by their reduced red foliar pigmentation.`,
-          habitat: 'Seepage slopes, wet pine savannas',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -387,7 +387,7 @@ export const layerGroups = [
           and infraspecific hybrids among these varieties are frequently observed. Protected populations are found within the Apalachicola National Forest in Florida, 
           though these continue to face threats from poaching and seed collection. Smaller populations also occur in the Conecuh National Forest and on Eglin Air Force Base, 
           but due to the plant’s high horticultural value and demand, all known sites require careful monitoring to ensure their long-term survival.`,
-          habitat: 'Wet pine savannas, seepage bogs',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Vulnerable',
           source: DEFAULT_SOURCE
         })
@@ -409,7 +409,7 @@ export const layerGroups = [
           and while infraspecific hybrids among these forms can occur, they are encountered only occasionally. Although the vast stands described by early naturalists have largely disappeared, 
           smaller populations remain fairly widespread. Well-managed examples are protected in areas such as Eglin Air Force Base and the 
           Apalachicola National Forest in Florida. At present, S. flava var. rugelii appears relatively secure in the wild.`,
-          habitat: 'Seepage slopes, wet pine savannas',
+          habitat: 'Gulf Coast seepage bogs and wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -428,7 +428,7 @@ export const layerGroups = [
           but if they do, they would require close monitoring due to the serious risk of poaching driven by their high horticultural value. 
           It is also possible that some wild populations have gone unrecognized, as the coloration of this form can closely resemble that of 
           S. flava var. maxima, making identification difficult without careful observation.`,
-          habitat: 'Seepage slopes, wet pine savannas',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -457,7 +457,7 @@ export const layerGroups = [
       The long-term survival of these small, isolated populations is uncertain, as many appear to be in gradual decline—likely due in part to falling water tables caused by land drainage and habitat alteration. 
       Close monitoring of this species’ status is essential. However, conservation initiatives, such as those at the Splinter Hill Bog and Weeks Bay Pitcher Plant Preserves in Alabama, 
       demonstrate that with active management and habitat restoration, S. leucophylla populations can rebound very well.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Seepage bogs and wet pine savannas',
       conservationStatus: 'Endangered'
     }),
     sources: [
@@ -507,7 +507,7 @@ export const layerGroups = [
           the extent of areolation varies greatly, ranging from being restricted to the uppermost portion of the pitcher in some plants to covering as much as a quarter of the leaf surface in others, 
           though usually less. Because no clear dividing line exists between these extremes, it is most accurate to treat S. leucophylla var. leucophylla as a single, 
           highly variable taxon encompassing a broad and continuous spectrum of coloration and patterning.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs and wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -528,7 +528,7 @@ export const layerGroups = [
           All confirmed records of this variety come from southern Alabama, where it is considered endemic. 
           Historically, the largest populations were found in the now extirpated Hurricane Creek Bog in Baldwin County. 
           Today, S. leucophylla var. alba persists in at least two well-managed protected preserves.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs and wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -547,7 +547,7 @@ export const layerGroups = [
           distribution: `A single flowering specimen of this taxon was first discovered in Alabama by Bill Scholl, followed by two additional plants found nearby by John Hummer and Carl Mazur. 
           Self- and cross-pollination of these individuals produced anthocyanin-free offspring, which have since become relatively well established in cultivation among horticulturists in both 
           North America and Europe. Subsequent discoveries of this exceptionally rare form indicate that its natural range is limited to southern Alabama.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs and wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -567,8 +567,14 @@ export const layerGroups = [
       blurhash: 'L8HnfqD+ORIn}[xZ-.jE01x@MyRk',
       photographer: '2014 Mary Keim',
       sourceUrl: 'https://www.flickr.com/photos/38514062@N03/13836069233/',
-      distribution: 'Description needed',
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      distribution: `Native to the southeastern United States, ranging from North Carolina through South Carolina, Georgia, and Florida. 
+      It typically inhabits wet savannas, pine flatwoods, seepage bogs, and other seasonally or persistently moist habitats. 
+      Across its range, S. minor often occurs in small, scattered populations, many of which are increasingly fragmented and threatened by habitat loss, hydrological changes, and development.
+      <br />
+      <br />
+      While some populations are conserved within well-managed reserves, such as the Doerun Pitcher Plant Preserve in Georgia, the Francis Marion National Forest in South Carolina, 
+      and the Okefenokee National Wildlife Refuge in Georgia, the majority of remaining stands occur on private land and remain highly vulnerable to disturbance.`,
+      habitat: 'Seepage bogs, wet pine savannas, and flatwoods',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -622,7 +628,7 @@ export const layerGroups = [
           A few remnant, multi-hectare populations survive in South Carolina, southern Georgia, and peninsular Florida, but these continue to decline due to habitat destruction and falling water tables. 
           Some populations are protected in well-managed reserves like the the Doerun Pitcher Plant Preserve in Georgia and the Francis Marion National Forest in South Carolina. The majority of remaining populations 
           occur on private land, where they remain highly vulnerable to disturbance and loss.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet pine savannas, and flatwoods',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -647,7 +653,7 @@ export const layerGroups = [
           <br />
           <br />
           It remains unclear whether naturally occurring populations of f. viridescens still persist in the wild, but if any do, they would require careful protection due to the ongoing risk of poaching driven by horticultural demand for this exceptionally rare plant.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet pine savannas, and flatwoods',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -668,7 +674,7 @@ export const layerGroups = [
           Sarracenia minor var. minor is absent or extremely rare within Okefenokee, likely due to its lower tolerance for very wet habitat. As a result, the ranges of the two varieties meet with minimal overlap. 
           Historically, var. okefenokeensis was also found in South Carolina but has since been extirpated. Today, it continues to occur around Kings Bay, Georgia, and may extend slightly into northern Florida. 
           The largest and most stable populations exist within the Okefenokee Refuge.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Wet bogs and savannas near the Okefenokee Swamp',
           conservationStatus: 'Critically Endangered'
         })
       })
@@ -690,7 +696,7 @@ export const layerGroups = [
       It once occurred farther south, but those populations have since been extirptaed. Small, managed sites also exist in Georgia and North Carolina, maintained by The Nature Conservancy. 
       Largers populations remain in northern Alabama, mostly within the Coosa Valley and Sand Mountain regions. Due to its extremely limited range and the continuing decline of wild populations, 
       Sarracenia oreophila is considered critically endangered and at risk of extinction.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Mountain bogs, hillside seepages, wet meadows',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -739,7 +745,7 @@ export const layerGroups = [
           No known populations of S. oreophila lack red venation or pigmentation entirely. This species is considered the most endangered of all Sarracenia, with the survival of many remaining wild populations still uncertain due to ongoing poaching. 
           Habitat loss is not currently a major threat, as all known sites are managed and protected under federal, state, or nonprofit stewardship. All of the privately owned sites follow conservation plans agreed upon with environmental organizations. 
           Despite these protections, illegal collection remains a serious issue, and removing S. oreophila plants from the wild violates U.S. law and can result in severe penalties.`,
-          habitat: 'Sandy pockets along streams, flat-wood sites',
+          habitat: 'Mountain seepage bogs and wet meadows',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -759,7 +765,7 @@ export const layerGroups = [
           Most of these populations have been extirpated, resulting in the loss of much of this variety’s genetic diversity. 
           Today it is exctremely rare in the wild, with the last known remnant stands confined to a single remote streamside bog within Little River Canyon National Preserve, Alabama. 
           It remains uncertain whether these remaining plants exist in sufficient numbers to sustain a viable population over the long term.`,
-          habitat: 'Sandy pockets along streams, flat-wood sites',
+          habitat: 'Mountain seepage bogs and wet meadows',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -782,7 +788,7 @@ export const layerGroups = [
       and just into two parishes in Louisiana. Although the number of known sites has declined, populations of this species remain extant throughout much of its original range. This persistence is partly due to the species’ 
       greater tolerance of disturbances that severely impact other Sarracenia species, for example - periodic roadside mowing. Sarracenia psittacina inhabits wet savannas, open wet longleaf pine forests, hillside seeps, sphagnum bogs, 
       and the margins of acidic ponds, swamps, and streams. It also occurs on hummocks within shallow acidic pools, in water-filled swales, and along artificial drainage ditches. The species shows a marked preference for saturated or flooded environments.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Seepage bogs, wet savannas, flooded wetlands',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -832,7 +838,7 @@ export const layerGroups = [
           Sarracenia psittacina var. psittacina continues to persist across remnants of southern wetlands and often grows opportunistically in areas where water tends to flood. 
           It is frequently observed in roadside drainage ditches and, along with Sarracenia purpurea subsp. venosa var. burkii, commonly appears along major highways that cross its natural range. 
           Populations of this taxon also occur in several well-managed protected areas, including De Soto National Forest in Mississippi, Eglin Air Force Base and Apalachicola National Forest in Florida, and the Okefenokee National Wildlife Refuge in Georgia.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet savannas, flooded wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -852,7 +858,7 @@ export const layerGroups = [
           distribution: `Specimens of this form have been documented historically in Florida and Alabama, particularly in northern Florida within swamp habitats across the Apalachicola National 
           Forest and at former sites along the Yellow River, where it is now extirpated. Remaining populations are small and scattered, and due to their rarity and high horticultural demand, 
           these stands must be closely monitored to protect them from poaching and further decline.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet savannas, flooded wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -875,7 +881,7 @@ export const layerGroups = [
           Most known populations of this variety are found in areas where few or no typical S. psittacina var psittacine plants occur. 
           While the full distribution of S. psittacina var. okefenokeensis remains poorly documented—partly due to its preference for floating sphagnum mats that are difficult to access, large populations are known from the Okefenokee National Wildlife Refuge in Georgia. 
           Smaller, secure populations also exist in the Apalachicola National Forest and at Eglin Air Force Base in Okaloosa County, Florida.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, floating prairies, sphagnum mats',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -894,7 +900,7 @@ export const layerGroups = [
           sourceUrl: 'https://sarracenia.proboards.com/thread/930/psittacina-var-okefenokeensis-luteoviridis',
           distribution: `Small stands of this form have been documented growing alongside Sarracenia psittacina var. okefenokeensis within the Okefenokee National Wildlife Refuge in Georgia. 
           It is uncertain whether wild populations of this rare variant still persist, but if any do, they should be closely monitored due to the heightened risk of poaching driven by strong horticultural interest in this distinctive plant.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, floating prairies, sphagnum mats',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -919,7 +925,7 @@ export const layerGroups = [
       The range extends southward into the United States, covering all of New England, most of the Great Lakes region, and parts of Iowa, West Virginia, Maryland, New Jersey, and Delaware. 
       Farther south, the distribution becomes more limited, remaining primarily within the Atlantic and eastern Gulf Coastal Plains and reaching as far west as eastern Mississippi, though with a notable absence across most of Georgia. 
       Isolated inland populations also occur in western North Carolina, particularly in the southern Appalachian Mountains and adjacent upland areas of neighboring states.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Seepage bogs, wet meadows, and northern wetlands',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -970,7 +976,7 @@ export const layerGroups = [
           where pristine populations persist due to low human impact across much of northern Canada.Farther south into the United States, ongoing habitat degradation and destruction continue to threaten its stability. 
           As a result, the already fragmented distribution of S. purpurea subsp. purpurea is expected to become even more patchy over time. Despite its relatively secure global outlook, U.S. populations should be monitored closely. 
           This subspecies occurs sympatrically with S. purpurea subsp. venosa in New Jersey and Delaware, and plants showing intermediate characteristics suggest occasional introgression between the two forms, extending as far south as Virginia.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet meadows, and northern wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -991,7 +997,7 @@ export const layerGroups = [
           Its known distribution includes Ontario, Quebec, Newfoundland, Nova Scotia, Massachusetts, Connecticut, New York, Pennsylvania, Michigan, Minnesota, and possibly New Jersey. 
           The form is also recorded from at least one protected area, Gros Morne National Park in Newfoundland. Due to its rarity and strong appeal among collectors, all known populations of 
           S. purpurea subsp. purpurea f. heterophylla should be closely monitored to prevent poaching and ensure long-term conservation.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet meadows, and northern wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1016,7 +1022,7 @@ export const layerGroups = [
           Most remaining populations of var. venosa are small, fragmented, and declining, affected by severe droughts, falling water tables, habitat loss, and suppression of natural wildfires. 
           The largest remaining populations occur in protected areas, including the Green Swamp Nature Preserve and the Croatan National Forest in North Carolina, and the Francis Marion National Forest and Lewis Ocean Bay Heritage Preserve in South Carolina. 
           Conservation efforts in these areas are critical, as the primary threat to this plant is ongoing habitat change rather than poaching.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Seepage bogs, wet savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1033,7 +1039,7 @@ export const layerGroups = [
           photographer: '2018 Barry Rice',
           sourceUrl: 'https://www.sarracenia.com/faq/faq5538.html',
           distribution: `No population of this rare form has been found in the wild. Only a few strains of Saracenia purpurea ssp venosa var venosa f pallidiflora have ever been recorded, all of which were propagated in cultivation from seeds collected from heterozygous plants.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Cultivated only, Seepage bogs, wet savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1053,7 +1059,7 @@ export const layerGroups = [
           distribution: `Sarracenia purpurea ssp. venosa var. burkii occurs exclusively in the Gulf Coast portion of the species’ range, from southwestern Georgia and northwestern Florida westward to George and Jackson counties in southeastern Mississippi. 
           Most populations are found within approximately 120 km of the coastline. Healthy populations exist in several well-managed protected areas in Florida, including the Apalachicola National Forest and Eglin Air Force Base. 
           Populations outside these protected areas require careful monitoring to ensure their continued survival.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Gulf Coast seepage bogs, wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1072,7 +1078,7 @@ export const layerGroups = [
           distribution: `Historically, specimens of Sarracenia purpurea subsp. venosa var. burkii f. luteola were collected in Liberty County, Florida, with additional plants documented in Baldwin County, Alabama, and Gulf County, Florida. 
           Seeds from these original plants were sent to the Atlanta Botanical Garden for propagation, and seedlings have since been distributed widely across North America and Europe. 
           It is unknown whether any populations of this rare form still persist in the wild, but if they do, they would require close monitoring due to the heightened risk of poaching driven by strong horticultural demand.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Gulf Coast seepage bogs, wet pine savannas',
           conservationStatus: 'Critically Endangered'
         })
       }),
@@ -1095,7 +1101,7 @@ export const layerGroups = [
           Montane sphagnous seepage bogs in the southern Appalachians are declining rapidly, putting this variety at high risk in the wild. 
           Most populations face possible extirpation due to habitat loss caused by construction, falling water tables, and nutrient runoff from surrounding agriculture, which allows shrubs and trees to overgrow the bogs and outcompete the plants. 
           The largest populations occur in at least one well-managed protected area, the Chattahoochee National Forest in Rabun County, Georgia. All remaining stands require careful monitoring and protection against poaching to ensure their survival.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Montane sphagnum seepage bogs',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1115,7 +1121,7 @@ export const layerGroups = [
       photographer: '2009 Barry Rice',
       sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287818&one=T',
       distribution: `The range of Sarracenia rubra is composed of several separate populations scattered across the southeastern United States, extending from southern North Carolina through South Carolina, Georgia, Florida, and Alabama, reaching the southeastern edge of Mississippi.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Seepage bogs, wet savannas, and pine flatwoods',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -1163,7 +1169,7 @@ export const layerGroups = [
           distribution: `Sarracenia rubra ssp. rubra is the most widespread and abundant member of the S. rubra complex. 
           Most of the original habitat has been destroyed, leading to its extirpation across much of its former range. The species is at risk of state-level extinction in Georgia. 
           Populations do persist in several well-managed protected areas, including the Green Swamp Nature Preserve and Holly Shelter Preserve in North Carolina, as well as the Cartwheel Bay Preserve, Francis Marion National Forest, and Lewis Ocean Bay Heritage Preserve in South Carolina.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1183,7 +1189,7 @@ export const layerGroups = [
           distribution: `Sarracenia rubra ssp. alabamaensis is a rare pitcher plant restricted to small, localized populations within the Fall Line Sandhills of Chilton and Elmore counties, 
           Alabama, north of the Alabama River, in an area roughly bounded by the Coosa River to the east and the Mulberry River to the west. Only twelve populations of this subspecies are known to survive, and all but one are very small. 
           S. rubra subsp. alabamaensis is considered endangered and at high risk of extinction. These remaining populations require rigorous and sustained protection to ensure the long-term survival of this plant in the wild.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Fall Line Sandhills, wet savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1204,7 +1210,7 @@ export const layerGroups = [
           Restricted civilian access and exclusion zones due to unexploded ordinance have left portions of this area relatively unexplored, meaning the full diversity of this taxon is still not completely known. 
           New populations continue to be discovered, some displaying unusual traits such as exceptionally prominent red coloration. Certain populations have even been found growing on floating organic mats composed of sphagnum moss, 
           dead branches, twigs, and other debris, with plants entirely unrooted from the ground.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Gulf Coast seepage bogs, wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1224,7 +1230,7 @@ export const layerGroups = [
           Unlike the anthocyanin-free forms of many other Sarracenia, this variety is relatively vigorous, but there are no reports of it becoming dominant within local populations. 
           Overall, the plant is rare and typically occurs as scattered individuals or small clusters within larger populations of S. rubra subsp. gulfensis. 
           It is unknown whether any wild populations of this rare form still exist, but if they do, they would require close monitoring due to the elevated risk of poaching driven by high horticultural demand.`,
-          habitat: 'Coastal plain seepage bogs',
+          habitat: 'Gulf Coast seepage bogs, wet pine savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1250,7 +1256,7 @@ export const layerGroups = [
           These habitats consist of thin layers of soil and sphagnum over bare rock, forming boggy aprons where water and acidic substrates accumulate along stream edges. 
           It can also occur in montane acidic seepage bogs associated with sphagnum moss, though unlike many other Sarracenia, it rarely grows on mats. 
           Currently, this subspecies survives at approximately ten sites across North and South Carolina, all of which are small and challenging to manage effectively for conservation.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Cataract and montane bogs',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1271,7 +1277,7 @@ export const layerGroups = [
           Unlike many of the anthocyanin-free forms of other Sarracenia species, this variety historically formed significant stands and outnumbered typical red-colored S. rubra ssp. jonesii in some populations. 
           Both in the wild and in cultivation, this form is at least as vigorous as the typical subspecies and reproduces effectively. Unfortunately, most of the documented populations have been lost due to poaching and habitat destruction. 
           Remaining populations require immediate protection to ensure their survival.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Cataract and montane bogs',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1296,7 +1302,7 @@ export const layerGroups = [
           This subspecies has become increasingly rare in the wild, with the number of known populations declining by roughly half over the last 20 years. 
           Some populations persist in well-managed preserves, such as the Splinter Hill Bog Preserve, as well as on private land. 
           Close monitoring is needed to ensure the continued survival of this plant in its natural range.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -1319,7 +1325,7 @@ export const layerGroups = [
           <br />
           <br />
           An anthocyanin-free form of this subspecies was cultivated at the Atlanta Botanical Gardens, although to my knowledge it has not yet been formally named.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Coastal plain seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
