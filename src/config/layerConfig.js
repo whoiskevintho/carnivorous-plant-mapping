@@ -836,7 +836,7 @@ export const layerGroups = [
           distribution: `Sarracenia psittacina var. psittacina is the dominant form of this species throughout its range, apart from a few isolated pockets, like the Okefenokee Swamp. 
           Its overall outlook in the wild remains relatively positive, even though much of its natural habitat has been lost. 
           Sarracenia psittacina var. psittacina continues to persist across remnants of southern wetlands and often grows opportunistically in areas where water tends to flood. 
-          It is frequently observed in roadside drainage ditches and, along with Sarracenia purpurea subsp. venosa var. burkii, commonly appears along major highways that cross its natural range. 
+          It is frequently observed in roadside drainage ditches and, along with Sarracenia purpurea ssp. venosa var. burkii, commonly appears along major highways that cross its natural range. 
           Populations of this taxon also occur in several well-managed protected areas, including De Soto National Forest in Mississippi, Eglin Air Force Base and Apalachicola National Forest in Florida, and the Okefenokee National Wildlife Refuge in Georgia.`,
           habitat: 'Seepage bogs, wet savannas, flooded wetlands',
           conservationStatus: 'Critically Endangered',
@@ -970,12 +970,12 @@ export const layerGroups = [
           imageUrl: 'https://static.inaturalist.org/photos/83887520/large.jpg',
           photographer: 'iNaturalist user mariaburke',
           sourceUrl: 'https://www.inaturalist.org/observations/52758274',
-          distribution: `Populations of Sarracenia purpurea subsp. purpurea are abundant across much of its range, thriving in numerous protected areas throughout Canada and the United States. 
+          distribution: `Populations of Sarracenia purpurea ssp. purpurea are abundant across much of its range, thriving in numerous protected areas throughout Canada and the United States. 
           Notable sites include Algonquin Provincial Park in Ontario, Gros Morne National Park in Newfoundland, and several preserves managed by the Michigan Nature Association. 
           The current status of populations in the territorial collectivity of St. Pierre and Miquelon remains uncertain. Overall, this subspecies is among the most secure of all Sarracenia in the wild, 
           where pristine populations persist due to low human impact across much of northern Canada.Farther south into the United States, ongoing habitat degradation and destruction continue to threaten its stability. 
-          As a result, the already fragmented distribution of S. purpurea subsp. purpurea is expected to become even more patchy over time. Despite its relatively secure global outlook, U.S. populations should be monitored closely. 
-          This subspecies occurs sympatrically with S. purpurea subsp. venosa in New Jersey and Delaware, and plants showing intermediate characteristics suggest occasional introgression between the two forms, extending as far south as Virginia.`,
+          As a result, the already fragmented distribution of S. purpurea ssp. purpurea is expected to become even more patchy over time. Despite its relatively secure global outlook, U.S. populations should be monitored closely. 
+          This subspecies occurs sympatrically with S. purpurea ssp. venosa in New Jersey and Delaware, and plants showing intermediate characteristics suggest occasional introgression between the two forms, extending as far south as Virginia.`,
           habitat: 'Seepage bogs, wet meadows, and northern wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
@@ -992,11 +992,11 @@ export const layerGroups = [
           imageUrl: 'https://farm8.staticflickr.com/7404/9442429926_b1235a7664.jpg',
           photographer: '2013 Mike Wang',
           sourceUrl: 'https://sarracenia.proboards.com/thread/826/purpurea-ssp-venosa-var-pallidiflora',
-          distribution: `This plant represents the first anthocyanin-free Sarracenia ever discovered. Sarracenia purpurea subsp. purpurea f. heterophylla is rare in the wild, comprising less than one percent of all known individuals of the subspecies. 
+          distribution: `This plant represents the first anthocyanin-free Sarracenia ever discovered. Sarracenia purpurea ssp. purpurea f. heterophylla is rare in the wild, comprising less than one percent of all known individuals of the subspecies. 
           However, at a few isolated sites, most notably the original locality in Massachusetts where Amos Eaton first described the form, it can be locally abundant or even dominant. 
           Its known distribution includes Ontario, Quebec, Newfoundland, Nova Scotia, Massachusetts, Connecticut, New York, Pennsylvania, Michigan, Minnesota, and possibly New Jersey. 
           The form is also recorded from at least one protected area, Gros Morne National Park in Newfoundland. Due to its rarity and strong appeal among collectors, all known populations of 
-          S. purpurea subsp. purpurea f. heterophylla should be closely monitored to prevent poaching and ensure long-term conservation.`,
+          S. purpurea ssp. purpurea f. heterophylla should be closely monitored to prevent poaching and ensure long-term conservation.`,
           habitat: 'Seepage bogs, wet meadows, and northern wetlands',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
@@ -1014,7 +1014,7 @@ export const layerGroups = [
           blurhash: 'LAEfDV?FR.xF}s9^SwnQX+OTwNaM',
           photographer: 'Alan Cressler',
           sourceUrl: 'https://fsus.ncbg.unc.edu/cust/2024/main.php?pg=show-taxon.php&&plantname=sarracenia+purpurea&limit=1&offset=2&taxonid=4619',
-          distribution: `Sarracenia purpurea subsp. venosa var. venosa is known to hybridize with S. purpurea subsp. purpurea where their ranges overlap in Delaware, Maryland, and possibly as far south as Virginia. 
+          distribution: `Sarracenia purpurea ssp. venosa var. venosa is known to hybridize with S. purpurea ssp. purpurea where their ranges overlap in Delaware, Maryland, and possibly as far south as Virginia. 
           In these overlap zones, populations include individuals resembling both subspecies as well as intermediates with mixed characteristics. Most of the interspecies populations have been extirpated.
           <br />
           <br />
@@ -1075,7 +1075,7 @@ export const layerGroups = [
           imageUrl: 'https://www.sarracenia.com/photos/sarracenia/sarrarose2001.jpg',
           photographer: '2018 Barry Rice',
           sourceUrl: 'https://www.sarracenia.com/faq/faq5542.html',
-          distribution: `Historically, specimens of Sarracenia purpurea subsp. venosa var. burkii f. luteola were collected in Liberty County, Florida, with additional plants documented in Baldwin County, Alabama, and Gulf County, Florida. 
+          distribution: `Historically, specimens of Sarracenia purpurea ssp. venosa var. burkii f. luteola were collected in Liberty County, Florida, with additional plants documented in Baldwin County, Alabama, and Gulf County, Florida. 
           Seeds from these original plants were sent to the Atlanta Botanical Garden for propagation, and seedlings have since been distributed widely across North America and Europe. 
           It is unknown whether any populations of this rare form still persist in the wild, but if they do, they would require close monitoring due to the heightened risk of poaching driven by strong horticultural demand.`,
           habitat: 'Gulf Coast seepage bogs, wet pine savannas',
@@ -1095,7 +1095,7 @@ export const layerGroups = [
           photographer: 'Alan Cressler',
           sourceUrl: 'https://fsus.ncbg.unc.edu/show-taxon-detail.php?taxonid=4617',
           distribution: `The name montana is derived from the Latin adjective montanus, reflecting the plant’s distribution in upland sphagnum seepage bogs of the Blue Ridge and southern 
-          Appalachian Mountains, including southwestern North Carolina, extreme western South Carolina, and northern Georgia. Its range is isolated from the rest of S. purpurea subsp. venosa.
+          Appalachian Mountains, including southwestern North Carolina, extreme western South Carolina, and northern Georgia. Its range is isolated from the rest of S. purpurea ssp. venosa.
           <br />
           <br />
           Montane sphagnous seepage bogs in the southern Appalachians are declining rapidly, putting this variety at high risk in the wild. 
@@ -1188,7 +1188,7 @@ export const layerGroups = [
           sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=1&taxonid=4607',
           distribution: `Sarracenia rubra ssp. alabamaensis is a rare pitcher plant restricted to small, localized populations within the Fall Line Sandhills of Chilton and Elmore counties, 
           Alabama, north of the Alabama River, in an area roughly bounded by the Coosa River to the east and the Mulberry River to the west. Only twelve populations of this subspecies are known to survive, and all but one are very small. 
-          S. rubra subsp. alabamaensis is considered endangered and at high risk of extinction. These remaining populations require rigorous and sustained protection to ensure the long-term survival of this plant in the wild.`,
+          S. rubra ssp. alabamaensis is considered endangered and at high risk of extinction. These remaining populations require rigorous and sustained protection to ensure the long-term survival of this plant in the wild.`,
           habitat: 'Fall Line Sandhills, wet savannas',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
@@ -1205,7 +1205,7 @@ export const layerGroups = [
           imageUrl: 'https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0609/2573.jpeg',
           photographer: '2009 Barry Rice',
           sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287815&one=T',
-          distribution: `Sarracenia rubra subsp. gulfensis is restricted to the western Florida Panhandle. Its range borders that of S. rubra ssp. wherryi in Alabama and in two Florida counties, 
+          distribution: `Sarracenia rubra ssp. gulfensis is restricted to the western Florida Panhandle. Its range borders that of S. rubra ssp. wherryi in Alabama and in two Florida counties, 
           and hybrids are extremely rare. Much of the subspecies’ original range lies within the boundaries of the expansive Eglin Air Force Base, where habitat remains largely intact. 
           Restricted civilian access and exclusion zones due to unexploded ordinance have left portions of this area relatively unexplored, meaning the full diversity of this taxon is still not completely known. 
           New populations continue to be discovered, some displaying unusual traits such as exceptionally prominent red coloration. Certain populations have even been found growing on floating organic mats composed of sphagnum moss, 
@@ -1228,7 +1228,7 @@ export const layerGroups = [
           sourceUrl: 'https://calphotos.berkeley.edu/cgi/img_query?seq_num=287815&one=T',
           distribution: `Several strains of Sarracenia rubra ssp. gulfensis f. luteoviridis have been documented, particularly along the Yellow River in Florida, although these populations have recently been extirpated. 
           Unlike the anthocyanin-free forms of many other Sarracenia, this variety is relatively vigorous, but there are no reports of it becoming dominant within local populations. 
-          Overall, the plant is rare and typically occurs as scattered individuals or small clusters within larger populations of S. rubra subsp. gulfensis. 
+          Overall, the plant is rare and typically occurs as scattered individuals or small clusters within larger populations of S. rubra ssp. gulfensis. 
           It is unknown whether any wild populations of this rare form still exist, but if they do, they would require close monitoring due to the elevated risk of poaching driven by high horticultural demand.`,
           habitat: 'Gulf Coast seepage bogs, wet pine savannas',
           conservationStatus: 'Critically Endangered',
@@ -1251,7 +1251,7 @@ export const layerGroups = [
           Unfortunately, much of this area has been heavily developed for golf courses, vacation homes, and mountain residences, leading to the extirpation of the majority of original stands.
           <br />
           <br />
-          This subspecies can hybridize with S. rubra subsp. venosa var. montana, although such occurrences were historically rare, and most sites where the two grew together have been lost. 
+          This subspecies can hybridize with S. rubra ssp. venosa var. montana, although such occurrences were historically rare, and most sites where the two grew together have been lost. 
           Remaining populations of S. rubra ssp. jonesii are primarily found in cataract bogs along the escarpment region of North and South Carolina. 
           These habitats consist of thin layers of soil and sphagnum over bare rock, forming boggy aprons where water and acidic substrates accumulate along stream edges. 
           It can also occur in montane acidic seepage bogs associated with sphagnum moss, though unlike many other Sarracenia, it rarely grows on mats. 
@@ -1272,7 +1272,7 @@ export const layerGroups = [
           imageUrl: 'https://fsus.ncbg.unc.edu/img/orig/amc/amc_05565.jpg',
           photographer: 'Alan Cressler',
           sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=5&taxonid=4611',
-          distribution: `Populations of Sarracenia rubra subsp. jonesii f. viridescens have been documented in Henderson County, North Carolina. 
+          distribution: `Populations of Sarracenia rubra ssp. jonesii f. viridescens have been documented in Henderson County, North Carolina. 
           Additional scattered populations were discovered by Donald Schnell near Caesars Head Mountain in Pickens County, South Carolina. 
           Unlike many of the anthocyanin-free forms of other Sarracenia species, this variety historically formed significant stands and outnumbered typical red-colored S. rubra ssp. jonesii in some populations. 
           Both in the wild and in cultivation, this form is at least as vigorous as the typical subspecies and reproduces effectively. Unfortunately, most of the documented populations have been lost due to poaching and habitat destruction. 
@@ -1295,7 +1295,7 @@ export const layerGroups = [
           sourceUrl: 'https://fsus.ncbg.unc.edu/main.php?pg=show-taxon.php&&plantname=Sarracenia&limit=1&offset=2&taxonid=4608',
           distribution: `Sarracenia rubra ssp. wherryi is confined to a small region of southwestern Alabama, extending from Washington County to Covington and Baldwin counties, with a few populations just over the Mississippi state line. 
           In Florida, its range comes into contact with S. rubra ssp. gulfensis, particularly along the Escambia and Okaloosa county line. 
-          Across most of its range, S. rubra subsp. wherryi occurs in open, wet sandy or peaty clearings, seepage areas, ditches in pine bogs, and pine savannahs, and it is often visible along roadside ditches. 
+          Across most of its range, S. rubra ssp. wherryi occurs in open, wet sandy or peaty clearings, seepage areas, ditches in pine bogs, and pine savannahs, and it is often visible along roadside ditches. 
           Its populations are highly patchy, but it frequently grows near S. leucophylla and S. purpurea, and although hybrids are rare, occasional complex backcrosses can be observed.
           <br />
           <br />
