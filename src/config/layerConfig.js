@@ -35,7 +35,7 @@ export const layerGroups = [
       distribution: `Sarracenia alata exhibits a two-zoned distribution. The eastern range extends from western Alabama, across coastal Mississippi, and into the far eastern parishes of Louisiana. The western range occurs in western Louisiana and extends into the Big Thicket region of eastern Texas, where populations are scattered and less common. A 225 km gap in central Louisiana separates these eastern and western populations, creating reproductive isolation between the two zones.
 
       In the western part of the range, certain populations produce smaller, stout, and densely pubescent pitchers, commonly known in cultivation as "stocky" or "short" forms. It is uncertain whether these plants represent environmental adaptations (ecophenes) or a stable morphological variant. Additionally, some western populations, particularly in Angelina, Newton, and Jasper counties (Texas) and Natchitoches and Beauregard Parishes (Louisiana), exhibit faint areoles (light patches) near the tops of their pitchers, a feature less typical of the species elsewhere.`,
-      habitat: 'Seepage bogs, wet pine flatwoods',
+      habitat: 'Seepage bogs, wet pine savannas',
       conservationStatus: 'Endangered',
       source: DEFAULT_SOURCE
     }),
@@ -86,7 +86,7 @@ export const layerGroups = [
           <br/>
           <br/>
           Although the species has been lost from many historical sites due to habitat destruction, large, healthy populations persist in several protected areas where prescribed burning maintains suitable conditions. These include the De Soto National Forest and Sandhill Crane National Wildlife Refuge in Mississippi, as well as the Big Thicket region of Texas. Because of these strongholds, the overall outlook for the species' survival in the wild remains relatively positive.`,
-          habitat: 'Seepage bogs, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -106,7 +106,7 @@ export const layerGroups = [
           distribution: `Sarracenia alata var. atrorubra populations are widespread but localized in Mississippi and eastern Louisiana. Their presence in the western part of the species' range remains uncertain.
           This variety often grows with and hybridizes with S. alata var. ornata and var. nigropurpurea. 
           Stable, extensive populations continue to thrive in well-protected sites such as the De Soto National Forest and the Sandhill Crane National Wildlife Refuge in Mississippi.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -125,7 +125,7 @@ export const layerGroups = [
           distribution: `Sarracenia alata var. cuprea is extremely rare, found only in scattered spots across Mississippi and eastern Louisiana. Their presence in the western part of the species' range remains uncertain. 
           It often grows with S. alata var. ornata and sometimes hybridizes with var. atrorubra and var. nigropurpurea. 
           Stable populations survive in protected areas like De Soto National Forest and the Sandhill Crane National Wildlife Refuge, where prescribed burns help maintain its bog habitat.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -144,7 +144,7 @@ export const layerGroups = [
           distribution: `Small, scattered populations of Sarracenia alata var. nigropurpurea occur in Mississippi and eastern Louisiana, where the plant is rare overall. 
           Their presence in the western part of the species' range remains uncertain. This variety often grows with and hybridizes with S. alata var. ornata and var. atrorubra. 
           Stable populations persist in protected areas like De Soto National Forest and the Sandhill Crane National Wildlife Refuge in Mississippi, where habitat is maintained with regular prescribed burns.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -163,7 +163,7 @@ export const layerGroups = [
           distribution: `Small, scattered populations of Sarracenia alata var. ornata occur in Mississippi and eastern Louisiana, where the plant is rare overall. 
           Their presence in the western part of the species' range remains uncertain. This variety often grows with and hybridizes with all other infraspecific taxa of S. alata, except S alata f. viridescens. 
           Stable populations persist in protected areas like De Soto National Forest and the Sandhill Crane National Wildlife Refuge in Mississippi, where habitat is maintained with regular prescribed burns.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -182,7 +182,7 @@ export const layerGroups = [
           distribution: `Small, scattered populations of Sarracenia alata var. rubrioperculata occur in Mississippi and eastern Louisiana, where the plant is rare overall. 
           Their presence in the western part of the species' range remains uncertain. This variety often grows with and hybridizes with all other infraspecific taxa of S. alata, except S alata f. viridescens. 
           Stable populations persist in protected areas like De Soto National Forest and the Sandhill Crane National Wildlife Refuge in Mississippi, where habitat is maintained with regular prescribed burns.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -199,7 +199,7 @@ export const layerGroups = [
           photographer: '2004 McPherson',
           sourceUrl: 'https://cpn.carnivorousplants.org/articles/CPNv33n3p76.pdf',
           distribution: `Sarracenia alata f. viridescens is an exceptionally rare form, known from only a few small, isolated populations, notably in Alabama.`,
-          habitat: 'Roadside ditches, wet pine flatwoods',
+          habitat: 'Seepage bogs, wet pine savannas',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
@@ -223,7 +223,7 @@ export const layerGroups = [
       Its range overlaps with nearly every other Sarracenia species except S. oreophila and S. alata, and it often hybridizes with most within its range—though not with S. psittacina, likely due to differences in flowering time. 
       The species’ distribution forms an arc from southeastern Virginia across the Atlantic and Gulf coastal plains through the Carolinas, Georgia, western Florida, and southeastern Alabama. 
       Once found in isolated inland populations on the Piedmont of North Carolina and in northern Florida, most of those have now disappeared.`,
-      habitat: 'Wet pine savannas, bogs',
+      habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
       conservationStatus: 'Vulnerable',
       source: DEFAULT_SOURCE
     }),
@@ -277,7 +277,7 @@ export const layerGroups = [
           It often grows alongside var. maxima, with hybrids between the two showing reduced pigmentation. 
           Strongholds include the Green Swamp in North Carolina, as well as several protected sites like Croatan National Forest, Cartwheel Bay Preserve, Francis Marion National Forest, 
           Lewis Ocean Bay Heritage Preserve, Santee Coastal Preserve, and wetlands managed by Meadowview Biological Station in Virginia.`,
-          habitat: 'Pine flatwoods, wet savannas',
+          habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
           conservationStatus: 'Vulnerable',
           source: DEFAULT_SOURCE
         })
@@ -302,7 +302,7 @@ export const layerGroups = [
           <br />
           Populations of Sarracenia flava var. atropurpurea are protected in several well-managed reserves, including the Green Swamp Nature Preserve and Maple Hill Preserve in North Carolina, 
           the Lewis Ocean Bay Heritage Preserve in South Carolina, and the Apalachicola National Forest, Blackwater River State Forest, and Conecuh National Forest in Florida.`,
-          habitat: 'Seepage slopes, wet pine savannas',
+          habitat: 'Seepage bogs, wet pine savannas, and acidic wetlands',
           conservationStatus: 'Endangered',
           source: DEFAULT_SOURCE
         })
