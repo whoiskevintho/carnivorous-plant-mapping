@@ -763,8 +763,7 @@ export const layerGroups = [
           sourceUrl: 'https://cpphotofinder.com/sarracenia-oreophila-var-ornata-5134.html',
           distribution: `Sarracenia oreophila var. ornata was once found in scattered populations across much of the species’ natural range, especially on Sand Mountain and along Little River Canyon in northeastern Alabama. 
           Most of these populations have been extirpated, resulting in the loss of much of this variety’s genetic diversity. 
-          Today it is exctremely rare in the wild, with the last known remnant stands confined to a single remote streamside bog within Little River Canyon National Preserve, Alabama. 
-          It remains uncertain whether these remaining plants exist in sufficient numbers to sustain a viable population over the long term.`,
+          Today it is extremely rare in the wild. It remains uncertain whether these remaining plants exist in sufficient numbers to sustain a viable population over the long term.`,
           habitat: 'Mountain seepage bogs and wet meadows',
           conservationStatus: 'Critically Endangered',
           source: DEFAULT_SOURCE
